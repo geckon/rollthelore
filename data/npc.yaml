@@ -1,0 +1,153 @@
+races:
+- dragonborn
+- dwarf
+- elf
+- gnome
+- half-Elf
+- half-Orc
+- halfling
+- human
+- tiefling
+
+classes:
+- barbarian
+- bard
+- cleric
+- druid
+- fighter
+- monk
+- paladin
+- ranger
+- rogue
+- sorcerer
+- warlock
+- wizard
+
+age:
+- very young
+- young
+- middle aged
+- older
+- very old
+- ancient
+
+physical:
+# build
+- plump
+- stocky
+- overweight
+- fat
+- medium build
+- athletic
+- slender
+- fit
+- slim
+- skinny
+- muscular
+- well built
+- curvy
+- obese
+- stout
+- chubby
+- lanky
+# height
+- petite
+- short
+- average height
+- tall
+- towering
+# skin
+- albino
+- pale
+- light
+- dark
+- tanned
+- freckles
+- spots
+- pimples
+- scarred
+- smallpox scars
+# (facial) hair
+- bald
+- short hair
+- shoulder-length hair
+- long hair
+- receding hair
+- dreadlocks
+- mohawk
+- clean-shaved
+- stubble
+- muttonchops
+- moustache
+- full beard
+# other
+- handsome
+- pretty
+- ugly
+- cute
+
+
+personality:
+- adventurous
+- arrogant
+- calm
+- capable
+- caring
+- charming
+- cheerful
+- compassionate
+- confident
+- cowardly
+- cruel
+- cultured
+- dependable
+- discreet
+- dishonest
+- dumb
+- dutiful
+- encouraging
+- excited
+- extrovert
+- fair
+- fearless
+- friendly
+- funny
+- generous
+- grumpy
+- happy
+- helpful
+- hot-headed
+- humble
+- ill-mannered
+- imaginative
+- impulsive
+- independent
+- introvert
+- keen
+- lazy
+- malicious
+- mean
+- moody
+- observant
+- optimistic
+- persistent
+- pessimistic
+- picky
+- pompous
+- precise
+- quarrelsome
+- reliable
+- rude
+- sarcastic
+- self-centered
+- serious
+- shy
+- sneaky
+- sullen
+- surly
+- sociable
+- thoughtless
+- trusting
+- unfriendly
+- unruly
+- vulgar

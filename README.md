@@ -1,2 +1,4 @@
-# rollthelore
-Unseen servant providing an advantage to DMs/GMs while creating their worlds.
+# RollTheLore
+An *unseen servant* providing an *advantage* to DMs/GMs while creating their worlds.
+
+WIP
