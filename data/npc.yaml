@@ -75,6 +75,7 @@ physical:
 # skin
 - albino
 - dark
+- fire-burnt skin
 - freckles
 - light
 - pale
@@ -113,10 +114,13 @@ physical:
 - unusual hair color
 
 # other
+- almost blind
+- almost deaf
 - arm missing
 - attractive
 - big nose
 - blackened teeth
+- blind
 - broken nose
 - cain
 - clean teeth
@@ -124,6 +128,8 @@ physical:
 - cross-eyed
 - crutches
 - cute
+- deaf
+- deep voice
 - dimple in chin
 - dimples in cheeks
 - ear missing
@@ -131,14 +137,22 @@ physical:
 - extravagant
 - finger(s) missing
 - fur on a part of body
+- glass eye
+- golden front tooth
 - handsome
 - high forehead
+- high-pitched voice
 - hook instead of a hand
 - huge scar
 - leg missing
+- limping
 - long nails
+- loud voice
+- massive jewelry
 - mismatched eyes color
 - missing eyebrows
+- monocle
+- mute
 - nose missing
 - overbite
 - pointy chin
@@ -147,15 +161,20 @@ physical:
 - scales on a part of body
 - scar across face
 - sexy
+- silent voice
 - small eyes
+- smokepipe
+- spectacles
 - tatooed
 - tattooed face
 - thick eyebrows
 - teeth missing
 - tusks
 - ugly
+- unable to walk
 - underbite
 - visible Adam's apple
+- whispers
 - wooden leg
 
 
@@ -164,6 +183,7 @@ personality:
 - adventurous
 - aggresive
 - aimless
+- alcoholic
 - amiable
 - ambitious
 - amoral
