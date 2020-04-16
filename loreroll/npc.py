@@ -1,5 +1,7 @@
+"""Module for generating NPCs."""
+
 import random
-from collections import namedtuple
+# from collections import namedtuple
 
 from strictyaml import load, Map, Str, Seq
 
@@ -13,7 +15,9 @@ NPC_SCHEMA = Map({
     'personality': Seq(Str()),
 })
 
+
 def _read_data():
+    """Read NPC data."""
     with open(NPC_FILENAME, 'r') as datafile:
         return load(datafile.read())
 
@@ -21,10 +25,10 @@ def _read_data():
 NPC_DATA = _read_data()
 
 
-
 def generate_npc():
-    print(random.choice(NPC_DATA['races']))
-    print(random.choice(NPC_DATA['classes']))
-    print(random.choice(NPC_DATA['age']))
-    print(random.choice(NPC_DATA['physical']))
-    print(random.choice(NPC_DATA['personality']))
+    """Generate and print an NPC."""
+    print(random.choice(NPC_DATA['races']))        # nosec
+    print(random.choice(NPC_DATA['classes']))      # nosec
+    print(random.choice(NPC_DATA['age']))          # nosec
+    print(random.choice(NPC_DATA['physical']))     # nosec
+    print(random.choice(NPC_DATA['personality']))  # nosec
