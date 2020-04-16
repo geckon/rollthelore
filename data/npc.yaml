@@ -9,6 +9,7 @@ races:
 - human
 - tiefling
 
+
 classes:
 - barbarian
 - bard
@@ -23,131 +24,483 @@ classes:
 - warlock
 - wizard
 
+
 age:
 - very young
 - young
+- adult
 - middle aged
 - older
+- old
 - very old
 - ancient
 
+
 physical:
 # build
-- plump
-- stocky
-- overweight
-- fat
-- medium build
 - athletic
-- slender
-- fit
-- slim
-- skinny
-- muscular
-- well built
-- curvy
-- obese
-- stout
+- broad shoulders
 - chubby
+- curvy
+- fat
+- fit
+- hourglass
+- hunched
 - lanky
+- medium build
+- muscular
+- obese
+- overweight
+- plump
+- sinewy
+- skinny
+- slender
+- slim
+- stocky
+- stout
+- strong
+- tall
+- thin
+- tough
+- weak
+- well built
+
 # height
+- average height
 - petite
 - short
-- average height
 - tall
 - towering
+
 # skin
 - albino
-- pale
-- light
 - dark
-- tanned
 - freckles
-- spots
+- light
+- pale
 - pimples
+- sagging
 - scarred
+- spots
 - smallpox scars
+- sunburnt
+- tanned
+- wrinkles
+
 # (facial) hair
+- afro
 - bald
+- beard
+- braids
+- clean-shaven
+- dreadlocks
+- full beard
+- goatee
+- greasy hair
+- handlebar beard
+- long hair
+- messy hair
+- mohawk
+- moustache
+- mullet
+- muttonchops
+- ponytail
+- receding hair
 - short hair
 - shoulder-length hair
-- long hair
-- receding hair
-- dreadlocks
-- mohawk
-- clean-shaved
 - stubble
-- muttonchops
-- moustache
-- full beard
+- thinning hair
+- unusual hair color
+
 # other
-- handsome
-- pretty
-- ugly
+- arm missing
+- attractive
+- big nose
+- blackened teeth
+- broken nose
+- cain
+- clean teeth
+- crooked nose
+- cross-eyed
+- crutches
 - cute
+- dimple in chin
+- dimples in cheeks
+- ear missing
+- earrings
+- extravagant
+- finger(s) missing
+- fur on a part of body
+- handsome
+- high forehead
+- hook instead of a hand
+- huge scar
+- leg missing
+- long nails
+- mismatched eyes color
+- missing eyebrows
+- nose missing
+- overbite
+- pointy chin
+- pointy teeth
+- pretty
+- scales on a part of body
+- scar across face
+- sexy
+- small eyes
+- tatooed
+- tattooed face
+- thick eyebrows
+- teeth missing
+- tusks
+- ugly
+- underbite
+- visible Adam's apple
+- wooden leg
 
 
 personality:
+- absentminded
 - adventurous
+- aggresive
+- aimless
+- amiable
+- ambitious
+- amoral
+- angry
+- anxious
+- apathetic
+- appreciative
 - arrogant
+- articulate
+- asocial
+- aspiring
+- assertive
+- attentive
+- authoritarian
+- barbaric
+- benevolent
+- bizarre
+- bold
+- brave
+- brilliant
+- brittle
+- brutal
+- businesslike
+- calculating
 - calm
 - capable
+- careless
 - caring
+- casual
+- cautious
+- charismatic
 - charming
 - cheerful
+- childish
+- clever
+- clumsy
 - compassionate
+- competitive
+- compulsive
 - confident
+- conforming
+- conservative
+- courageous
+- courteous
 - cowardly
+- crazy
+- creative
+- critical
 - cruel
 - cultured
+- cunning
+- curious
+- cynical
+- daring
+- decadent
+- deceitful
+- decent
+- deceptive
+- decisive
+- dedicated
+- delicate
+- demanding
 - dependable
+- desperate
+- determined
+- dignified
+- disciplined
+- discouraging
 - discreet
 - dishonest
+- disloyal
+- disobedient
+- disorderly
+- disorganized
+- disrespectful
+- disruptive
+- dogmatic
+- dominating
+- dramatic
+- dreamy
 - dumb
 - dutiful
+- educated
+- egocentric
+- egoistical
+- elegant
+- eloquent
+- empathetic
+- emotional
 - encouraging
+- energetic
+- enthusiastic
+- envious
+- erratic
 - excited
 - extrovert
 - fair
+- faithful
+- fanatical
 - fearless
+- fiery
+- firm
+- flexible
+- focused
+- folksy
+- foolish
+- forgetful
+- forgiving
+- formal
+- forthright
 - friendly
+- fun-loving
 - funny
+- gallant
 - generous
+- gentle
+- genuine
+- good-natured
+- glamorous
+- gloomy
+- gracious
+- greedy
+- grim
 - grumpy
+- guileless
+- gullible
 - happy
+- hardworking
+- hateful
 - helpful
+- hesitant
+- high-spirited
+- honest
+- honorable
+- hostile
 - hot-headed
 - humble
+- idealistic
+- ignorant
 - ill-mannered
 - imaginative
+- impatient
+- impractical
 - impulsive
+- inconsiderate
+- incorruptible
+- indecisive
 - independent
+- individualistic
+- innovative
+- insecure
+- insensitive
+- insightful
+- insincere
+- insulting
+- intelligent
+- intollerant
 - introvert
+- irrational
+- irreligious
+- irresponsible
+- irritable
+- jealous
+- just
 - keen
+- kind
+- knowledgeable
 - lazy
+- leader
+- liberal
+- lovable
+- loyal
 - malicious
+- mannered
+- mannerless
 - mean
+- meddlesome
+- melancholic
+- miserable
+- misguided
+- modest
+- money-minded
 - moody
+- moralistic
+- mystical
+- naive
+- narrow-minded
+- neat
+- negativistic
+- neglectful
+- neurotic
+- neutral
+- nihilistic
+- noncommittal
+- noncompetitive
+- obedient
 - observant
+- obsessive
+- odd
+- old-fashioned
+- open-minded
+- opinionated
+- opportunistic
 - optimistic
+- orderly
+- ordinary
+- organized
+- outspoken
+- paranoid
+- passionate
+- passive
+- patient
+- patriotic
+- pedantic
+- perceptive
 - persistent
+- persuasive
+- perverse
 - pessimistic
 - picky
+- pleasant
+- polite
 - pompous
+- popular
+- possessive
+- power-hungry
+- practical
 - precise
+- prejudiced
+- pretentious
+- principled
+- private
+- procrastinating
+- progressive
+- protective
+- provocative
+- proud
+- prudent
+- punctual
+- pure
 - quarrelsome
+- quiet
+- quirky
+- rational
+- realistic
+- reckless
+- regretful
+- relaxed
 - reliable
+- religious
+- resentful
+- reserved
+- respectful
+- responsible
+- rigid
+- ritualistic
+- romantic
+- rowdy
 - rude
+- sadistic
 - sarcastic
+- sceptical
+- scheming
+- scornful
+- secretive
 - self-centered
+- self-conscious
+- self-critical
+- self-reliant
+- selfish
+- selfless
+- sensitive
+- sentimental
 - serious
+- shallow
+- sharing
+- shortsighted
 - shy
+- silly
+- skillful
+- sloppy
+- slow
+- sly
 - sneaky
-- sullen
-- surly
 - sociable
+- soft
+- soft-hearted
+- solemn
+- solitary
+- sophisticated
+- spontaneous
+- stoic
+- stupid
+- strict
+- stubborn
+- stylish
+- submissive
+- sullen
+- superstitious
+- surly
+- suspicious
+- sympathetic
+- systematic
+- tactless
+- talkative
+- tense
 - thoughtless
+- tidy
+- timid
+- tolerant
+- transparent
+- treacherous
+- troublesome
 - trusting
+- unaggressive
+- unambitious
+- unappreciative
+- uncaring
+- unconvincing
+- uncooperative
+- understanding
+- undisciplined
 - unfriendly
+- ungrateful
+- unimaginative
+- unpredictable
+- unprincipled
+- unreliable
+- unsentimental
+- unstable
 - unruly
+- upright
+- vague
+- vindictive
 - vulgar
+- warm
+- whimsical
+- wise
+- wishful
+- witty
