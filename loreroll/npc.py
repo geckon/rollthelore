@@ -27,8 +27,8 @@ NPC_DATA = _read_data()
 
 def generate_npc():
     """Generate and print an NPC."""
-    print(random.choice(NPC_DATA['races']))
-    print(random.choice(NPC_DATA['classes']))
-    print(random.choice(NPC_DATA['age']))
-    print(random.choice(NPC_DATA['physical']))
-    print(random.choice(NPC_DATA['personality']))
+    print(random.choice(NPC_DATA['races']))        # nosec
+    print(random.choice(NPC_DATA['classes']))      # nosec
+    print(random.choice(NPC_DATA['age']))          # nosec
+    print(random.choice(NPC_DATA['physical']))     # nosec
+    print(random.choice(NPC_DATA['personality']))  # nosec
