@@ -1,0 +1,25 @@
+language: python
+python:
+  - '3.6'
+  - '3.6-dev'
+  - '3.7'
+  - '3.7-dev'
+  - '3.8'
+  - '3.8-dev'
+
+# command to install dependencies
+install:
+  - pip install poetry
+  - poetry install
+
+# command to run tests
+script:
+  - make bandit
+  - make pycodestyle
+  - make pylint-error
+#  - make test
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
