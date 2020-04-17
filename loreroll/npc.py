@@ -3,7 +3,7 @@
 import random
 from collections import namedtuple
 
-from strictyaml import load, Map, Str, Seq
+from strictyaml import Float, load, Map, MapPattern, Seq, Str
 
 
 NPC = namedtuple(
@@ -21,7 +21,7 @@ NPC_FILENAME = 'data/npc.yaml'
 NPC_SCHEMA = Map({
     'races': Seq(Str()),
     'classes': Seq(Str()),
-    'age': Seq(Str()),
+    'age': Seq(MapPattern(Str(), Float())),
     'physical': Seq(Str()),
     'personality': Seq(Str()),
 })
@@ -41,7 +41,10 @@ def generate_npc():
     return NPC(    # nosec
         race=str(random.choice(NPC_DATA['races'])),
         class_=str(random.choice(NPC_DATA['classes'])),
-        age=str(random.choice(NPC_DATA['age'])),
+        age=str(random.choices(
+            [x['age'] for x in NPC_DATA['age']],
+            [float(x['weight']) for x in NPC_DATA['age']]
+        )[0]),
         physical=[str(random.choice(NPC_DATA['physical'])),
                   str(random.choice(NPC_DATA['physical']))],
         personality=[str(random.choice(NPC_DATA['personality'])),

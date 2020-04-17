@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """Simple CLI tool for generating NPCs."""
 
 import click
