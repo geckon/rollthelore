@@ -10,7 +10,12 @@ from loreroll.npc import generate_npc
 def generate(number=1):
     """Generate 'number' of NPCs and print them."""
     for _ in range(number):
-        generate_npc()
+        npc = generate_npc()
+        print(f'Age: {npc.age}')
+        print(f'Race: {npc.race}')
+        print(f'Class: {npc.class_}')
+        print(f'Appearance: {", ".join(npc.physical)}')
+        print(f'Personality: {", ".join(npc.personality)}')
         print()
 
 
