@@ -19,7 +19,7 @@ NPC = namedtuple(
 NPC_FILENAME = 'data/npc.yaml'
 
 NPC_SCHEMA = Map({
-    'races': Seq(Str()),
+    'races': Seq(MapPattern(Str(), Float())),
     'classes': Seq(Str()),
     'age': Seq(MapPattern(Str(), Float())),
     'physical': Seq(Str()),
@@ -52,7 +52,7 @@ def _weighted_random(data_set):
 def generate_npc():
     """Generate and print an NPC."""
     return NPC(    # nosec
-        race=str(random.choice(NPC_DATA['races'])),
+        race=str(_weighted_random(NPC_DATA['races'])),
         class_=str(random.choice(NPC_DATA['classes'])),
         age=str(_weighted_random(NPC_DATA['age'])),
         physical=[str(random.choice(NPC_DATA['physical'])),

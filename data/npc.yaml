@@ -1,13 +1,58 @@
 races:
-- dragonborn
-- dwarf
-- elf
-- gnome
-- half-Elf
-- half-Orc
-- halfling
-- human
-- tiefling
+- v: aasimar
+  w: 0.5
+- v: bugbear
+  w: 0.1
+- v: dragonborn
+  w: 1
+- v: dwarf (hill)
+  w: 0.5
+- v: dwarf (mountain)
+  w: 0.5
+- v: elf (high)
+  w: 0.5
+- v: elf (wood)
+  w: 0.5
+- v: elf (dark - drow)
+  w: 0.1
+- v: firbolg
+  w: 0.5
+- v: gnome (forest)
+  w: 0.5
+- v: gnome (rock)
+  w: 0.5
+- v: goblin
+  w: 0.1
+- v: goliath
+  w: 0.5
+- v: half-elf
+  w: 1
+- v: half-orc
+  w: 1
+- v: halfling (lightfoot)
+  w: 0.5
+- v: halfling (stout)
+  w: 0.5
+- v: hobgoblin
+  w: 0.1
+- v: human
+  w: 2
+- v: kenku
+  w: 0.5
+- v: kobold
+  w: 0.1
+- v: lizardfolk
+  w: 0.5
+- v: orc
+  w: 0.1
+- v: tabaxi
+  w: 0.5
+- v: triton
+  w: 0.5
+- v: tiefling
+  w: 1
+- v: yuan-ti pureblood
+  w: 0.1
 
 
 classes:
