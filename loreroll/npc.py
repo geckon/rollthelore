@@ -19,9 +19,9 @@ NPC = namedtuple(
 NPC_FILENAME = 'data/npc.yaml'
 
 NPC_SCHEMA = Map({
-    'races': Seq(MapPattern(Str(), Float())),
+    'races': Seq(Map({'v': Str(), 'w': Float()})),
     'classes': Seq(Str()),
-    'age': Seq(MapPattern(Str(), Float())),
+    'age': Seq(Map({'v': Str(), 'w': Float()})),
     'physical': Seq(Str()),
     'personality': Seq(Str()),
 })
@@ -30,7 +30,7 @@ NPC_SCHEMA = Map({
 def _read_data():
     """Read NPC data."""
     with open(NPC_FILENAME, 'r') as datafile:
-        return load(datafile.read())
+        return load(datafile.read(), NPC_SCHEMA)
 
 
 NPC_DATA = _read_data()
