@@ -26,22 +26,22 @@ classes:
 
 
 age:
-- age: very young
-  weight: 0.2
-- age: young
-  weight: 0.7
-- age: adult
-  weight: 1
-- age: middle aged
-  weight: 1
-- age: older
-  weight: 1
-- age: old
-  weight: 0.7
-- age: very old
-  weight: 0.3
-- age: ancient
-  weight: 0.1
+- v: very young
+  w: 0.2
+- v: young
+  w: 0.7
+- v: adult
+  w: 1
+- v: middle aged
+  w: 1
+- v: older
+  w: 1
+- v: old
+  w: 0.7
+- v: very old
+  w: 0.3
+- v: ancient
+  w: 0.1
 
 
 physical:

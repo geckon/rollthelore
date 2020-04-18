@@ -36,15 +36,25 @@ def _read_data():
 NPC_DATA = _read_data()
 
 
+def _weighted_random(data_set):
+    """Returns a weighted random option from data_set.
+
+    The data_set needs to be a sequence of dict-like objects with at
+    least 'v' (value) and 'w' (weight) keys. Weights need to be
+    convertible to float.
+    """
+    return random.choices(
+        [x['v'] for x in data_set],
+        [float(x['w']) for x in data_set]
+    )[0]
+
+
 def generate_npc():
     """Generate and print an NPC."""
     return NPC(    # nosec
         race=str(random.choice(NPC_DATA['races'])),
         class_=str(random.choice(NPC_DATA['classes'])),
-        age=str(random.choices(
-            [x['age'] for x in NPC_DATA['age']],
-            [float(x['weight']) for x in NPC_DATA['age']]
-        )[0]),
+        age=str(_weighted_random(NPC_DATA['age'])),
         physical=[str(random.choice(NPC_DATA['physical'])),
                   str(random.choice(NPC_DATA['physical']))],
         personality=[str(random.choice(NPC_DATA['personality'])),
