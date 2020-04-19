@@ -14,10 +14,16 @@ from loreroll.npc import generate_npc
               help="Allowed race(s).")
 @click.option('--race-disallowed', '-R', 'races_no', multiple=True,
               help="Disallowed race(s).")
-def generate(number=1, races_yes=None, races_no=None):
+@click.option('--class-allowed', '-c', 'classes_yes', multiple=True,
+              help="Allowed class(es).")
+@click.option('--class-disallowed', '-C', 'classes_no', multiple=True,
+              help="Disallowed class(es).")
+def generate(number=1, races_yes=None, races_no=None, classes_yes=None,
+             classes_no=None):
     """Generate 'number' of NPCs and print them."""
     for _ in range(number):
-        npc = generate_npc(races_yes=races_yes, races_no=races_no)
+        npc = generate_npc(races_yes=races_yes, races_no=races_no,
+                           classes_yes=classes_yes, classes_no=classes_no)
         print(f'Age: {npc.age}')
         print(f'Race: {npc.race}')
         print(f'Class: {npc.class_}')

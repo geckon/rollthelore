@@ -49,19 +49,51 @@ def _weighted_random(data_set):
     )[0]
 
 
-def _filter_weighted_data(data_set, allowed=(), disallowed=()):
+def _filter_string_data(data_set, allowed=(), disallowed=()):
+    """Filters the given weighted data according to given filters.
+
+    The data_set needs to be a sequence of string values.
+    The allowed and disallowed need to be sequences of strings and
+    their contents will be used to filter the values in data_set.
+
+    A data_set item will be a part of the result only if its value
+    contains any of the allowed values as a substring unless it also
+    contains any of the disallowed values as a substring.
+
+    If allowed sequence is not provided, all items in data_set are
+    allowed. If disallowed sequence is not provided, no items are
+    filtered out.
+    """
+    if not allowed and not disallowed:
+        return data_set
+
+    if allowed:
+        filtered = []
+        for item in allowed:
+            filtered += [x for x in data_set if item in x]
+    else:
+        filtered = data_set
+
+    for item in disallowed:
+        filtered = [x for x in filtered if item not in x]
+    return filtered
+
+
+def _filter_structured_data(data_set, allowed=(), disallowed=()):
     """Filters the given weighted data according to given filters.
 
     The data_set needs to be a sequence of dict-like objects with at
     least 'v' (value) key with string values.
-    The allowed and disallowed need to be lists and their contents will
-    be used to filter the values in data_set.
+    The allowed and disallowed need to be sequences of strings and
+    their contents will be used to filter the values in data_set.
 
-    A data_set item will be a part of the result only if it's value
+    A data_set item will be a part of the result only if its value
     contains any of the allowed values as a substring unless it also
     contains any of the disallowed values as a substring.
-    If allowed list is not provided, all items in data_set are allowed.
-    If disallowed list is not provided, no items are filtered out.
+
+    If allowed sequence is not provided, all items in data_set are
+    allowed. If disallowed sequence is not provided, no items are
+    filtered out.
     """
     if not allowed and not disallowed:
         return data_set
@@ -78,13 +110,16 @@ def _filter_weighted_data(data_set, allowed=(), disallowed=()):
     return filtered
 
 
-def generate_npc(races_yes=None, races_no=None):
+def generate_npc(races_yes=None, races_no=None, classes_yes=None,
+                 classes_no=None):
     """Generate and print an NPC."""
-    races = _filter_weighted_data(NPC_DATA['races'], races_yes, races_no)
+    races = _filter_structured_data(NPC_DATA['races'], races_yes, races_no)
+    classes = _filter_string_data(NPC_DATA['classes'], classes_yes,
+                                  classes_no)
 
     return NPC(    # nosec
         race=str(_weighted_random(races)),
-        class_=str(random.choice(NPC_DATA['classes'])),
+        class_=str(random.choice(classes)),
         age=str(_weighted_random(NPC_DATA['age'])),
         physical=[str(random.choice(NPC_DATA['physical'])),
                   str(random.choice(NPC_DATA['physical']))],
