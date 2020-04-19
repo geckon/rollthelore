@@ -8,22 +8,27 @@ from loreroll.npc import generate_npc
 
 
 @click.command()
+@click.option('--age-allowed', '-a', 'ages_yes', multiple=True,
+              help="Allowed age(s).")
+@click.option('--age-disallowed', '-A', 'ages_no', multiple=True,
+              help="Disallowed age(s).")
+@click.option('--class-allowed', '-c', 'classes_yes', multiple=True,
+              help="Allowed class(es).")
+@click.option('--class-disallowed', '-C', 'classes_no', multiple=True,
+              help="Disallowed class(es).")
 @click.option('--number', '-n', default=1,
               help="Number of NPCs to generate.")
 @click.option('--race-allowed', '-r', 'races_yes', multiple=True,
               help="Allowed race(s).")
 @click.option('--race-disallowed', '-R', 'races_no', multiple=True,
               help="Disallowed race(s).")
-@click.option('--class-allowed', '-c', 'classes_yes', multiple=True,
-              help="Allowed class(es).")
-@click.option('--class-disallowed', '-C', 'classes_no', multiple=True,
-              help="Disallowed class(es).")
-def generate(number=1, races_yes=None, races_no=None, classes_yes=None,
-             classes_no=None):
+def generate(number=1, ages_yes=None, ages_no=None, classes_yes=None,
+             classes_no=None, races_yes=None, races_no=None):
     """Generate 'number' of NPCs and print them."""
     for _ in range(number):
-        npc = generate_npc(races_yes=races_yes, races_no=races_no,
-                           classes_yes=classes_yes, classes_no=classes_no)
+        npc = generate_npc(ages_yes=ages_yes, ages_no=ages_no,
+                           classes_yes=classes_yes, classes_no=classes_no,
+                           races_yes=races_yes, races_no=races_no)
         print(f'Age: {npc.age}')
         print(f'Race: {npc.race}')
         print(f'Class: {npc.class_}')

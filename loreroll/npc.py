@@ -110,17 +110,18 @@ def _filter_structured_data(data_set, allowed=(), disallowed=()):
     return filtered
 
 
-def generate_npc(races_yes=None, races_no=None, classes_yes=None,
-                 classes_no=None):
+def generate_npc(ages_yes=None, ages_no=None, classes_yes=None,
+                 classes_no=None, races_yes=None, races_no=None, ):
     """Generate and print an NPC."""
-    races = _filter_structured_data(NPC_DATA['races'], races_yes, races_no)
+    ages = _filter_structured_data(NPC_DATA['age'], ages_yes, ages_no)
     classes = _filter_string_data(NPC_DATA['classes'], classes_yes,
                                   classes_no)
+    races = _filter_structured_data(NPC_DATA['races'], races_yes, races_no)
 
     return NPC(    # nosec
         race=str(_weighted_random(races)),
         class_=str(random.choice(classes)),
-        age=str(_weighted_random(NPC_DATA['age'])),
+        age=str(_weighted_random(ages)),
         physical=[str(random.choice(NPC_DATA['physical'])),
                   str(random.choice(NPC_DATA['physical']))],
         personality=[str(random.choice(NPC_DATA['personality'])),
