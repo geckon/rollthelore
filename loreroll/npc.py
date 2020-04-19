@@ -120,22 +120,20 @@ def generate_npc(ages_yes=None, ages_no=None, classes_yes=None,
     if detail_level >= 2:
         classes = _filter_string_data(NPC_DATA['classes'], classes_yes,
                                       classes_no)
-        class_ = str(random.choice(classes))
+        class_ = str(random.choice(classes))  # nosec
     else:
         class_ = None
 
     races = _filter_structured_data(NPC_DATA['races'], races_yes, races_no)
     race = str(_weighted_random(races))
 
-    physical = []
-    for _ in range(detail_level):
-        physical.append(str(random.choice(NPC_DATA['physical'])))
+    physical = random.choices(NPC_DATA['physical'], k=detail_level)
+    physical = [str(trait) for trait in physical]
 
-    personality = []
-    for _ in range(detail_level):
-        personality.append(str(random.choice(NPC_DATA['personality'])))
+    personality = random.choices(NPC_DATA['personality'], k=detail_level)
+    personality = [str(trait) for trait in personality]
 
-    return NPC(    # nosec
+    return NPC(
         race=race,
         class_=class_,
         age=age,
