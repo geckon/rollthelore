@@ -8,6 +8,7 @@ from strictyaml import Float, load, Map, Seq, Str
 
 NPC = namedtuple(
     'NPC', [
+        'name',
         'age',
         'race',
         'class_',
@@ -24,6 +25,7 @@ NPC_SCHEMA = Map({
     'age': Seq(Map({'v': Str(), 'w': Float()})),
     'physical': Seq(Str()),
     'personality': Seq(Str()),
+    'names': Seq(Str()),
 })
 
 
@@ -124,6 +126,8 @@ def generate_npc(ages_yes=None, ages_no=None, classes_yes=None,
     else:
         class_ = None
 
+    name = str(random.choice(NPC_DATA['names']))  # nosec
+
     races = _filter_structured_data(NPC_DATA['races'], races_yes, races_no)
     race = str(_weighted_random(races))
 
@@ -134,6 +138,7 @@ def generate_npc(ages_yes=None, ages_no=None, classes_yes=None,
     personality = [str(trait) for trait in personality]
 
     return NPC(
+        name=name,
         race=race,
         class_=class_,
         age=age,

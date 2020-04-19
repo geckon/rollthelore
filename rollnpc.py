@@ -33,6 +33,7 @@ def generate(number=1, ages_yes=None, ages_no=None, classes_yes=None,
                            classes_yes=classes_yes, classes_no=classes_no,
                            detail_level=detail_level,
                            races_yes=races_yes, races_no=races_no)
+        print(f'Name: {npc.name}')
         print(f'Age: {npc.age}')
         print(f'Race: {npc.race}')
         if npc.class_:
