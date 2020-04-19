@@ -51,6 +51,8 @@ races:
   w: 0.5
 - v: tiefling
   w: 1
+- v: tortle
+  w: 0.1
 - v: yuan-ti pureblood
   w: 0.1
 
