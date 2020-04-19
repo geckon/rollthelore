@@ -3,7 +3,7 @@
 import random
 from collections import namedtuple
 
-from strictyaml import Float, load, Map, MapPattern, Seq, Str
+from strictyaml import Float, load, Map, Seq, Str
 
 
 NPC = namedtuple(
@@ -49,10 +49,41 @@ def _weighted_random(data_set):
     )[0]
 
 
-def generate_npc():
+def _filter_weighted_data(data_set, allowed=(), disallowed=()):
+    """Filters the given weighted data according to given filters.
+
+    The data_set needs to be a sequence of dict-like objects with at
+    least 'v' (value) key with string values.
+    The allowed and disallowed need to be lists and their contents will
+    be used to filter the values in data_set.
+
+    A data_set item will be a part of the result only if it's value
+    contains any of the allowed values as a substring unless it also
+    contains any of the disallowed values as a substring.
+    If allowed list is not provided, all items in data_set are allowed.
+    If disallowed list is not provided, no items are filtered out.
+    """
+    if not allowed and not disallowed:
+        return data_set
+
+    if allowed:
+        filtered = []
+        for item in allowed:
+            filtered += [x for x in data_set if item in x['v']]
+    else:
+        filtered = data_set
+
+    for item in disallowed:
+        filtered = [x for x in filtered if item not in x['v']]
+    return filtered
+
+
+def generate_npc(races_yes=None, races_no=None):
     """Generate and print an NPC."""
+    races = _filter_weighted_data(NPC_DATA['races'], races_yes, races_no)
+
     return NPC(    # nosec
-        race=str(_weighted_random(NPC_DATA['races'])),
+        race=str(_weighted_random(races)),
         class_=str(random.choice(NPC_DATA['classes'])),
         age=str(_weighted_random(NPC_DATA['age'])),
         physical=[str(random.choice(NPC_DATA['physical'])),
