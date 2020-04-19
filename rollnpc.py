@@ -16,6 +16,8 @@ from loreroll.npc import generate_npc
               help="Allowed class(es).")
 @click.option('--class-disallowed', '-C', 'classes_no', multiple=True,
               help="Disallowed class(es).")
+@click.option('--detail-level', '-d', 'detail_level', default=2,
+              help="Amount of details generated (one or higher).")
 @click.option('--number', '-n', default=1,
               help="Number of NPCs to generate.")
 @click.option('--race-allowed', '-r', 'races_yes', multiple=True,
@@ -23,15 +25,18 @@ from loreroll.npc import generate_npc
 @click.option('--race-disallowed', '-R', 'races_no', multiple=True,
               help="Disallowed race(s).")
 def generate(number=1, ages_yes=None, ages_no=None, classes_yes=None,
-             classes_no=None, races_yes=None, races_no=None):
+             classes_no=None, detail_level=2, races_yes=None,
+             races_no=None):
     """Generate 'number' of NPCs and print them."""
     for _ in range(number):
         npc = generate_npc(ages_yes=ages_yes, ages_no=ages_no,
                            classes_yes=classes_yes, classes_no=classes_no,
+                           detail_level=detail_level,
                            races_yes=races_yes, races_no=races_no)
         print(f'Age: {npc.age}')
         print(f'Race: {npc.race}')
-        print(f'Class: {npc.class_}')
+        if npc.class_:
+            print(f'Class: {npc.class_}')
         print(f'Appearance: {", ".join(npc.physical)}')
         print(f'Personality: {", ".join(npc.personality)}')
         print()

@@ -111,19 +111,34 @@ def _filter_structured_data(data_set, allowed=(), disallowed=()):
 
 
 def generate_npc(ages_yes=None, ages_no=None, classes_yes=None,
-                 classes_no=None, races_yes=None, races_no=None, ):
+                 classes_no=None, detail_level=2, races_yes=None,
+                 races_no=None):
     """Generate and print an NPC."""
     ages = _filter_structured_data(NPC_DATA['age'], ages_yes, ages_no)
-    classes = _filter_string_data(NPC_DATA['classes'], classes_yes,
-                                  classes_no)
+    age = str(_weighted_random(ages))
+
+    if detail_level >= 2:
+        classes = _filter_string_data(NPC_DATA['classes'], classes_yes,
+                                      classes_no)
+        class_ = str(random.choice(classes))
+    else:
+        class_ = None
+
     races = _filter_structured_data(NPC_DATA['races'], races_yes, races_no)
+    race = str(_weighted_random(races))
+
+    physical = []
+    for _ in range(detail_level):
+        physical.append(str(random.choice(NPC_DATA['physical'])))
+
+    personality = []
+    for _ in range(detail_level):
+        personality.append(str(random.choice(NPC_DATA['personality'])))
 
     return NPC(    # nosec
-        race=str(_weighted_random(races)),
-        class_=str(random.choice(classes)),
-        age=str(_weighted_random(ages)),
-        physical=[str(random.choice(NPC_DATA['physical'])),
-                  str(random.choice(NPC_DATA['physical']))],
-        personality=[str(random.choice(NPC_DATA['personality'])),
-                     str(random.choice(NPC_DATA['personality']))]
+        race=race,
+        class_=class_,
+        age=age,
+        physical=physical,
+        personality=personality,
     )
