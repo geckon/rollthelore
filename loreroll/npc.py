@@ -112,8 +112,8 @@ def _filter_structured_data(data_set, allowed=(), disallowed=()):
     return filtered
 
 
-def generate_npc(detail_level=2, filters=None):
-    """Generate and print an NPC.
+def generate_npc(detail_level=2, ages=None, classes=None, races=None):
+    """Generate an NPC.
 
     Detail level affects how much detailed the generated NPC will be.
     Positive integer is expected, higher number means more details.
@@ -122,33 +122,19 @@ def generate_npc(detail_level=2, filters=None):
     to start getting contradictory traits (like fat and slim at the same
     time).
 
-    Filters are expected to be a dictionary with string keys like
-    'races_yes' and 'races_no' and sequence values with traits that are
-    supposed to be included and excluded respectively while generating
-    NPCs. Traits currently supporting filters are ages, classes and
-    races.
+    Ages, classes and races are supposed to be sequences of allowed
+    ages/classes/races. If None is passed instead of any of these,
+    the default set of traits will be used.
     """
-    if filters is None:
-        filters = {}
-
-    ages = _filter_structured_data(NPC_DATA['age'],
-                                   filters.get('ages_yes'),
-                                   filters.get('ages_no'))
     age = str(_weighted_random(ages))
 
     if detail_level >= 2:
-        classes = _filter_string_data(NPC_DATA['classes'],
-                                      filters.get('classes_yes'),
-                                      filters.get('classes_yes'))
         class_ = str(random.choice(classes))  # nosec
     else:
         class_ = None
 
     name = str(random.choice(NPC_DATA['names']))  # nosec
 
-    races = _filter_structured_data(NPC_DATA['races'],
-                                    filters.get('races_yes'),
-                                    filters.get('races_yes'))
     race = str(_weighted_random(races))
 
     physical = random.choices(NPC_DATA['physical'], k=detail_level)
@@ -165,3 +151,40 @@ def generate_npc(detail_level=2, filters=None):
         physical=physical,
         personality=personality,
     )
+
+
+def generate_npcs(number=1, detail_level=2, filters=None):
+    """Generate a number of NPCs.
+
+    Detail level affects how much detailed the generated NPCs will be.
+    Positive integer is expected, higher number means more details.
+    Default is meant to give the best results, detail level of one gives
+    just the bare minimum and with certain level of detail the NPCs tend
+    to start getting contradictory traits (like fat and slim at the same
+    time).
+
+    Filters are expected to be a dictionary with string keys like
+    'races_yes' and 'races_no' and sequence values with traits that are
+    supposed to be included and excluded respectively while generating
+    NPCs. Traits currently supporting filters are ages, classes and
+    races.
+    """
+    # filter the data
+    ages = _filter_structured_data(NPC_DATA['age'],
+                                   filters.get('ages_yes'),
+                                   filters.get('ages_no'))
+    # classes are not used for detail_level = 1
+    if detail_level >= 2:
+        classes = _filter_string_data(NPC_DATA['classes'],
+                                      filters.get('classes_yes'),
+                                      filters.get('classes_no'))
+    else:
+        classes = []
+    races = _filter_structured_data(NPC_DATA['races'],
+                                    filters.get('races_yes'),
+                                    filters.get('races_no'))
+
+    npcs = []
+    for _ in range(number):
+        npcs.append(generate_npc(detail_level, ages, classes, races))
+    return npcs

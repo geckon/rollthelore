@@ -4,7 +4,7 @@
 
 import click
 
-from loreroll.npc import generate_npc
+from loreroll.npc import generate_npcs
 
 
 def print_npc(npc):
@@ -49,8 +49,8 @@ def generate(number=1, ages_yes=None, ages_no=None, classes_yes=None,
         'races_yes': races_yes,
     }
 
-    for _ in range(number):
-        npc = generate_npc(detail_level=detail_level, filters=filters)
+    npcs = generate_npcs(number, detail_level=detail_level, filters=filters)
+    for npc in npcs:
         print_npc(npc)
 # pylint: enable=too-many-arguments
 
