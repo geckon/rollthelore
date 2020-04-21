@@ -7,6 +7,18 @@ import click
 from loreroll.npc import generate_npc
 
 
+def print_npc(npc):
+    """Print the given NPC."""
+    print(f'Name: {npc.name}')
+    print(f'Age: {npc.age}')
+    print(f'Race: {npc.race}')
+    if npc.class_:
+        print(f'Class: {npc.class_}')
+    print(f'Appearance: {", ".join(npc.physical)}')
+    print(f'Personality: {", ".join(npc.personality)}')
+    print()
+
+# pylint: disable=too-many-arguments
 @click.command()
 @click.option('--age-allowed', '-a', 'ages_yes', multiple=True,
               help="Allowed age(s).")
@@ -28,19 +40,19 @@ def generate(number=1, ages_yes=None, ages_no=None, classes_yes=None,
              classes_no=None, detail_level=2, races_yes=None,
              races_no=None):
     """Generate 'number' of NPCs and print them."""
+    filters = {
+        'ages_no': ages_no,
+        'ages_yes': ages_yes,
+        'classes_no': classes_no,
+        'classes_yes': classes_yes,
+        'races_no': races_no,
+        'races_yes': races_yes,
+    }
+
     for _ in range(number):
-        npc = generate_npc(ages_yes=ages_yes, ages_no=ages_no,
-                           classes_yes=classes_yes, classes_no=classes_no,
-                           detail_level=detail_level,
-                           races_yes=races_yes, races_no=races_no)
-        print(f'Name: {npc.name}')
-        print(f'Age: {npc.age}')
-        print(f'Race: {npc.race}')
-        if npc.class_:
-            print(f'Class: {npc.class_}')
-        print(f'Appearance: {", ".join(npc.physical)}')
-        print(f'Personality: {", ".join(npc.personality)}')
-        print()
+        npc = generate_npc(detail_level=detail_level, filters=filters)
+        print_npc(npc)
+# pylint: enable=too-many-arguments
 
 
 if __name__ == '__main__':

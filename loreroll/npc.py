@@ -112,23 +112,43 @@ def _filter_structured_data(data_set, allowed=(), disallowed=()):
     return filtered
 
 
-def generate_npc(ages_yes=None, ages_no=None, classes_yes=None,
-                 classes_no=None, detail_level=2, races_yes=None,
-                 races_no=None):
-    """Generate and print an NPC."""
-    ages = _filter_structured_data(NPC_DATA['age'], ages_yes, ages_no)
+def generate_npc(detail_level=2, filters=None):
+    """Generate and print an NPC.
+
+    Detail level affects how much detailed the generated NPC will be.
+    Positive integer is expected, higher number means more details.
+    Default is meant to give the best results, detail level of one gives
+    just the bare minimum and with certain level of detail the NPCs tend
+    to start getting contradictory traits (like fat and slim at the same
+    time).
+
+    Filters are expected to be a dictionary with string keys like
+    'races_yes' and 'races_no' and sequence values with traits that are
+    supposed to be included and excluded respectively while generating
+    NPCs. Traits currently supporting filters are ages, classes and
+    races.
+    """
+    if filters is None:
+        filters = {}
+
+    ages = _filter_structured_data(NPC_DATA['age'],
+                                   filters.get('ages_yes'),
+                                   filters.get('ages_no'))
     age = str(_weighted_random(ages))
 
     if detail_level >= 2:
-        classes = _filter_string_data(NPC_DATA['classes'], classes_yes,
-                                      classes_no)
+        classes = _filter_string_data(NPC_DATA['classes'],
+                                      filters.get('classes_yes'),
+                                      filters.get('classes_yes'))
         class_ = str(random.choice(classes))  # nosec
     else:
         class_ = None
 
     name = str(random.choice(NPC_DATA['names']))  # nosec
 
-    races = _filter_structured_data(NPC_DATA['races'], races_yes, races_no)
+    races = _filter_structured_data(NPC_DATA['races'],
+                                    filters.get('races_yes'),
+                                    filters.get('races_yes'))
     race = str(_weighted_random(races))
 
     physical = random.choices(NPC_DATA['physical'], k=detail_level)
