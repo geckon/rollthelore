@@ -121,7 +121,7 @@ description = "python code static checker"
 name = "pylint"
 optional = false
 python-versions = ">=3.5.*"
-version = "2.5.0"
+version = "2.5.2"
 
 [package.dependencies]
 astroid = ">=2.4.0,<=2.5"
@@ -241,7 +241,7 @@ python-versions = "*"
 version = "1.11.2"
 
 [metadata]
-content-hash = "787b04aa56aedbdcfafda3f965a3eba77d1fbdd6f2bae26cb170631ef7972d99"
+content-hash = "abfb7289f902c9bb1ca894d17024b76eac70625982a0043fd27d304267534244"
 python-versions = "^3.6"
 
 [metadata.files]
@@ -309,8 +309,8 @@ pycodestyle = [
     {file = "pycodestyle-2.5.0.tar.gz", hash = "sha256:e40a936c9a450ad81df37f549d676d127b1b66000a6c500caa2b085bc0ca976c"},
 ]
 pylint = [
-    {file = "pylint-2.5.0-py3-none-any.whl", hash = "sha256:bd556ba95a4cf55a1fc0004c00cf4560b1e70598a54a74c6904d933c8f3bd5a8"},
-    {file = "pylint-2.5.0.tar.gz", hash = "sha256:588e114e3f9a1630428c35b7dd1c82c1c93e1b0e78ee312ae4724c5e1a1e0245"},
+    {file = "pylint-2.5.2-py3-none-any.whl", hash = "sha256:dd506acce0427e9e08fb87274bcaa953d38b50a58207170dbf5b36cf3e16957b"},
+    {file = "pylint-2.5.2.tar.gz", hash = "sha256:b95e31850f3af163c2283ed40432f053acbc8fc6eba6a069cb518d9dbf71848c"},
 ]
 python-dateutil = [
     {file = "python-dateutil-2.8.1.tar.gz", hash = "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"},
