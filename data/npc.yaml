@@ -93,11 +93,16 @@ age:
 
 physical:
 # build
+- agile
 - athletic
+- brawny
 - broad shoulders
 - chubby
+- clumsy
+- crooked posture
 - curvy
 - fat
+- feeble
 - fit
 - hourglass
 - hunched
@@ -107,6 +112,7 @@ physical:
 - obese
 - overweight
 - plump
+- robust
 - sinewy
 - skinny
 - slender
@@ -141,12 +147,14 @@ physical:
 - smallpox scars
 - sunburnt
 - tanned
+- unusual skin color
 - wrinkles
 
 # (facial) hair
 - afro
 - bald
 - beard
+- braided beard
 - braids
 - clean-shaven
 - dreadlocks
@@ -168,16 +176,58 @@ physical:
 - thinning hair
 - unusual hair color
 
+# clothes
+- clean clothes
+- dirty clothes
+- flamboyant clothes
+- formal clothes
+- outlandish clothes
+- ragged clothes
+
+# jewelry
+- amulet
+- bracelets
+- circlet
+- distinctive amulet
+- distinctive bracelets
+- distinctive circlet
+- distinctive jewelry
+- distinctive necklace
+- distinctive piercing(s)
+- distinctive ring(s)
+- jewelry
+- massive amulet
+- massive bracelets
+- massive circlet
+- massive jewelry
+- massive necklace
+- massive piercing(s)
+- massive ring(s)
+- necklace
+- piercing(s)
+- ring(s)
+- subtle amulet
+- subtle bracelets
+- subtle circlet
+- subtle jewelry
+- subtle necklace
+- subtle piercing(s)
+- subtle ring(s)
+
 # other
 - almost blind
 - almost deaf
 - arm missing
 - attractive
+- big ears
+- big eyes
 - big nose
+- birthmark
 - blackened teeth
 - blind
 - broken nose
 - cain
+- clean
 - clean teeth
 - crooked nose
 - cross-eyed
@@ -187,9 +237,14 @@ physical:
 - deep voice
 - dimple in chin
 - dimples in cheeks
+- dirty
+- distinctive nose
 - ear missing
 - earrings
+- exceptionally beautiful
+- exceptionally ugly
 - extravagant
+- eyes twitch
 - finger(s) missing
 - fur on a part of body
 - glass eye
@@ -198,14 +253,16 @@ physical:
 - high forehead
 - high-pitched voice
 - hook instead of a hand
+- hooked nose
 - huge scar
 - leg missing
 - limping
 - long nails
 - loud voice
-- massive jewelry
 - mismatched eyes color
 - missing eyebrows
+- missing fingers
+- missing teeth
 - monocle
 - mute
 - nose missing
@@ -213,21 +270,27 @@ physical:
 - pointy chin
 - pointy teeth
 - pretty
+- ragged
 - scales on a part of body
 - scar across face
+- scar(s)
 - sexy
 - silent voice
+- small ears
 - small eyes
+- small nose
 - smokepipe
 - spectacles
-- tatooed
+- tattooed
 - tattooed face
 - thick eyebrows
 - teeth missing
 - tusks
+- twitch
 - ugly
 - unable to walk
 - underbite
+- unusual eye color
 - visible Adam's apple
 - whispers
 - wooden leg
@@ -246,6 +309,7 @@ personality:
 - anxious
 - apathetic
 - appreciative
+- argumentative
 - arrogant
 - articulate
 - asocial
@@ -255,8 +319,10 @@ personality:
 - authoritarian
 - barbaric
 - benevolent
+- bites fingernails
 - bizarre
 - bold
+- bored
 - brave
 - brilliant
 - brittle
@@ -270,8 +336,11 @@ personality:
 - casual
 - cautious
 - charismatic
+- charitable
 - charming
+- cheater
 - cheerful
+- cheewing
 - childish
 - clever
 - clumsy
@@ -303,8 +372,10 @@ personality:
 - demanding
 - dependable
 - desperate
+- destructive
 - determined
 - dignified
+- dim-witted
 - disciplined
 - discouraging
 - discreet
@@ -317,10 +388,14 @@ personality:
 - disruptive
 - dogmatic
 - dominating
+- doom-sayer
+- doubtful
 - dramatic
 - dreamy
+- driven
 - dumb
 - dutiful
+- easily distracted
 - educated
 - egocentric
 - egoistical
@@ -337,6 +412,8 @@ personality:
 - extrovert
 - fair
 - faithful
+- family person
+- famous
 - fanatical
 - fearless
 - fiery
@@ -370,12 +447,15 @@ personality:
 - hateful
 - helpful
 - hesitant
+- high voice
 - high-spirited
 - honest
 - honorable
 - hostile
 - hot-headed
+- hot-tempered
 - humble
+- humming
 - idealistic
 - ignorant
 - ill-mannered
@@ -393,6 +473,7 @@ personality:
 - insensitive
 - insightful
 - insincere
+- inspiring
 - insulting
 - intelligent
 - intollerant
@@ -402,6 +483,8 @@ personality:
 - irresponsible
 - irritable
 - jealous
+- joker
+- judging
 - just
 - keen
 - kind
@@ -410,6 +493,8 @@ personality:
 - leader
 - liberal
 - lovable
+- loving
+- low voice
 - loyal
 - malicious
 - mannered
@@ -423,9 +508,11 @@ personality:
 - money-minded
 - moody
 - moralistic
+- mysterious
 - mystical
 - naive
 - narrow-minded
+- nationalist
 - neat
 - negativistic
 - neglectful
@@ -435,6 +522,7 @@ personality:
 - noncommittal
 - noncompetitive
 - obedient
+- oblivious
 - observant
 - obsessive
 - odd
@@ -447,6 +535,7 @@ personality:
 - ordinary
 - organized
 - outspoken
+- pacing
 - paranoid
 - passionate
 - passive
@@ -482,6 +571,7 @@ personality:
 - quarrelsome
 - quiet
 - quirky
+- racist
 - rational
 - realistic
 - reckless
@@ -493,6 +583,7 @@ personality:
 - reserved
 - respectful
 - responsible
+- revengeful
 - rigid
 - ritualistic
 - romantic
@@ -500,24 +591,30 @@ personality:
 - rude
 - sadistic
 - sarcastic
+- scandalous
 - sceptical
 - scheming
 - scornful
+- seclusive
 - secretive
 - self-centered
 - self-conscious
 - self-critical
 - self-reliant
+- self-sacrificing
 - selfish
 - selfless
 - sensitive
 - sentimental
 - serious
 - shallow
+- shameful
 - sharing
 - shortsighted
 - shy
 - silly
+- sincere
+- singing
 - skillful
 - sloppy
 - slow
@@ -529,30 +626,40 @@ personality:
 - solemn
 - solitary
 - sophisticated
+- speaks loudly
+- speaks silently
+- spiritual
 - spontaneous
+- staring
 - stoic
 - stupid
 - strict
 - stubborn
+- stutters
 - stylish
 - submissive
 - sullen
 - superstitious
 - surly
 - suspicious
+- swindler
 - sympathetic
 - systematic
 - tactless
 - talkative
+- taps fingers
 - tense
 - thoughtless
 - tidy
 - timid
 - tolerant
+- traditionalist
 - transparent
 - treacherous
 - troublesome
 - trusting
+- tugs hair/beard
+- twirls hair/beard
 - unaggressive
 - unambitious
 - unappreciative
@@ -576,6 +683,8 @@ personality:
 - vulgar
 - warm
 - whimsical
+- whispers
+- whistling
 - wise
 - wishful
 - witty
