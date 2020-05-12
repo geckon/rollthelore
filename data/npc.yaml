@@ -183,6 +183,7 @@ physical:
 - formal clothes
 - outlandish clothes
 - ragged clothes
+- well dressed
 
 # jewelry
 - amulet
@@ -226,6 +227,7 @@ physical:
 - blackened teeth
 - blind
 - broken nose
+- broken jaw
 - cain
 - clean
 - clean teeth
@@ -245,7 +247,6 @@ physical:
 - exceptionally ugly
 - extravagant
 - eyes twitch
-- finger(s) missing
 - fur on a part of body
 - glass eye
 - golden front tooth
@@ -260,8 +261,9 @@ physical:
 - long nails
 - loud voice
 - mismatched eyes color
+- missing eye
 - missing eyebrows
-- missing fingers
+- missing finger(s)
 - missing teeth
 - monocle
 - mute
@@ -284,7 +286,6 @@ physical:
 - tattooed
 - tattooed face
 - thick eyebrows
-- teeth missing
 - tusks
 - twitch
 - ugly
