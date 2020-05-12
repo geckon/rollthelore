@@ -18,6 +18,7 @@ def print_npc(npc):
     print(f'Personality: {", ".join(npc.personality)}')
     print()
 
+
 # pylint: disable=too-many-arguments
 @click.command()
 @click.option('--age-allowed', '-a', 'ages_yes', multiple=True,
