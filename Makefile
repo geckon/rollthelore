@@ -17,5 +17,5 @@ pylint-error:
 test:
 	python -m pytest tests
 
-travis: bandit pycodestyle pylint-error #test
+travis: bandit pycodestyle pylint-error test
 
