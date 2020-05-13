@@ -14,8 +14,8 @@ pylint:
 pylint-error:
 	pylint --reports=n --disable=C,R,W rollnpc.py loreroll
 
-#test:
-#	python -m unittest discover -v tests
+test:
+	python -m pytest tests
 
-travis: bandit pycodestyle pylint-error #test
+travis: bandit pycodestyle pylint-error test
 

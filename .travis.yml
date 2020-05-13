@@ -15,7 +15,7 @@ script:
   - make bandit
   - make pycodestyle
   - make pylint-error
-#  - make test
+  - make test
 
 notifications:
   email:

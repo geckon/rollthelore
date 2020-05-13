@@ -76,8 +76,9 @@ def _filter_string_data(data_set, allowed=(), disallowed=()):
     else:
         filtered = data_set
 
-    for item in disallowed:
-        filtered = [x for x in filtered if item not in x]
+    if disallowed:
+        for item in disallowed:
+            filtered = [x for x in filtered if item not in x]
     return filtered
 
 
@@ -107,8 +108,9 @@ def _filter_structured_data(data_set, allowed=(), disallowed=()):
     else:
         filtered = data_set
 
-    for item in disallowed:
-        filtered = [x for x in filtered if item not in x['v']]
+    if disallowed:
+        for item in disallowed:
+            filtered = [x for x in filtered if item not in x['v']]
     return filtered
 
 
@@ -166,10 +168,12 @@ def generate_npcs(number=1, detail_level=2, filters=None):
     Filters are expected to be a dictionary with string keys like
     'races_yes' and 'races_no' and sequence values with traits that are
     supposed to be included and excluded respectively while generating
-    NPCs. Traits currently supporting filters are ages, classes and
+    NPCs. Properties currently supporting filters are ages, classes and
     races.
     """
     # filter the data
+    if filters is None:
+        filters = {}
     ages = _filter_structured_data(NPC_DATA['age'],
                                    filters.get('ages_yes'),
                                    filters.get('ages_no'))
