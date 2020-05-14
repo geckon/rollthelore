@@ -1,5 +1,6 @@
 """Module for generating NPCs."""
 
+import os
 import random
 from collections import namedtuple
 
@@ -17,7 +18,7 @@ NPC = namedtuple(
     ]
 )
 
-NPC_FILENAME = 'data/npc.yaml'
+NPC_FILENAME = os.path.join(os.path.dirname(__file__), 'data/npc.yaml')
 
 NPC_SCHEMA = Map({
     'races': Seq(Map({'v': Str(), 'w': Float()})),
