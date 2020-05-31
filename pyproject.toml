@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rollthelore"
-version = "0.1"
+version = "0.1.1"
 description = "An unseen servant providing an advantage to DMs/GMs while creating their worlds."
 readme="README.md"
 authors = ["Tomáš Heger"]
