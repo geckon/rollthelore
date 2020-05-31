@@ -43,8 +43,8 @@ pip install rollthelore
 ## Usage
 
 ```
-$ rollnpc.py --help
-Usage: rollnpc.py [OPTIONS]
+$ rollnpc --help
+Usage: rollnpc [OPTIONS]
 
   Generate 'number' of NPCs and print them.
 
@@ -63,7 +63,7 @@ Options:
 ## Examples
 
 ```
-$ rollnpc.py
+$ rollnpc
 Name: Zaniel
 Age: older
 Race: tabaxi
@@ -73,7 +73,7 @@ Personality: discouraging, disrespectful
 ```
 
 ```
-$ rollnpc.py -n3
+$ rollnpc -n3
 Name: Iseult
 Age: old
 Race: dragonborn
@@ -97,7 +97,7 @@ Personality: honorable, stylish
 ```
 
 ```
-$ rollnpc.py -n2 -r elf
+$ rollnpc -n2 -r elf
 Name: Evadne
 Age: young
 Race: elf (wood)
@@ -114,7 +114,7 @@ Personality: witty, organized
 ```
 
 ```
-$ rollnpc.py --detail-level 1
+$ rollnpc --detail-level 1
 Name: Séverin
 Age: young
 Race: tiefling
@@ -123,7 +123,7 @@ Personality: happy
 ```
 
 ```
-$ rollnpc.py --detail-level 3
+$ rollnpc --detail-level 3
 Name: Korbin
 Age: adult
 Race: gnome (forest)
