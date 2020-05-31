@@ -34,6 +34,12 @@ serve for other game systems as well. The imagination is what matters the most.
 Please note that the tool is under development. Ideas, comments and bug reports are
 welcome!
 
+## Installation
+
+```
+pip install rollthelore
+```
+
 ## Usage
 
 ```

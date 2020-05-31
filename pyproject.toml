@@ -2,6 +2,7 @@
 name = "rollthelore"
 version = "0.1"
 description = "An unseen servant providing an advantage to DMs/GMs while creating their worlds."
+readme="README.md"
 authors = ["Tomáš Heger"]
 packages = [
     { include = "loreroll" },
