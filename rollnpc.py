@@ -56,11 +56,14 @@ def generate(number=1, ages_yes=None, ages_no=None, classes_yes=None,
         'races_yes': races_yes,
     }
 
+    # Seed properly - use either the value from command line or seed randomly.
     if seed is None:
+        # String needed instead of int because command line options are also
+        # strings.
         seed = str(random.randrange(sys.maxsize))
     random.seed(seed)
     print(f"Seed used: '{seed}'. Run with '-s {seed}' to get the same "
-          "result.\n")
+          f"result.\n")
 
     npcs = generate_npcs(number, detail_level=detail_level, filters=filters)
     for npc in npcs:
