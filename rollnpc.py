@@ -60,7 +60,7 @@ def generate(number=1, ages_yes=None, ages_no=None, classes_yes=None,
     if seed is None:
         # String needed instead of int because command line options are also
         # strings.
-        seed = str(random.randrange(sys.maxsize))
+        seed = str(random.randrange(sys.maxsize))  # nosec
     random.seed(seed)
     print(f"Seed used: '{seed}'. Run with '-s {seed}' to get the same "
           f"result.\n")
