@@ -25,8 +25,8 @@ and build more fluff around it with both imagination and improvisation.
 Sometimes the generated character doesn't make much sense but often that is
 exactly the fun part. When I need an NPC for a story I like to *roll* a few of
 them and pick one as a basis, then I build on that. It can also be used to
-pre-roll a few NPCs in advance and then use them e.g. when your playes decide
-to enter a shop or address a person you you hadn't planned beforehand.
+pre-roll a few NPCs in advance and then use them e.g. when your players decide
+to enter a shop or address a person you hadn't planned beforehand.
 
 Primarily RollTheLore is intended to be used with DnD 5e but it can very well
 serve for other game systems as well. The imagination is what matters the most.
