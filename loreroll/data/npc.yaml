@@ -117,6 +117,7 @@ physical:
 - skinny
 - slender
 - slim
+- slumped shoulders
 - stocky
 - stout
 - strong
@@ -224,8 +225,10 @@ physical:
 - big eyes
 - big nose
 - birthmark
+- black eye
 - blackened teeth
 - blind
+- blushing
 - broken nose
 - broken jaw
 - cain
@@ -249,6 +252,7 @@ physical:
 - eyes twitch
 - fur on a part of body
 - glass eye
+- glasses
 - golden front tooth
 - handsome
 - high forehead
@@ -264,6 +268,7 @@ physical:
 - missing eye
 - missing eyebrows
 - missing finger(s)
+- missing fingernail(s)
 - missing teeth
 - monocle
 - mute
@@ -457,6 +462,7 @@ personality:
 - hot-tempered
 - humble
 - humming
+- hungry for fame
 - idealistic
 - ignorant
 - ill-mannered
@@ -468,6 +474,7 @@ personality:
 - incorruptible
 - indecisive
 - independent
+- indifferent
 - individualistic
 - innovative
 - insecure
@@ -665,6 +672,7 @@ personality:
 - unambitious
 - unappreciative
 - uncaring
+- uncertain
 - unconvincing
 - uncooperative
 - understanding
@@ -725,6 +733,7 @@ names:
 - Annihya
 - Antia
 - Anya
+- Apollonia
 - Arcadia
 - Archane
 - Ariadne
@@ -761,6 +770,7 @@ names:
 - Carys
 - Cassia
 - Cassiopeia
+- Celeste
 - Celestine
 - Celoa
 - Cephenrene
@@ -777,6 +787,7 @@ names:
 - Desmina
 - Dessa
 - Drusila
+- Duella
 - Dylena
 - Ebatryne
 - Ecematare
@@ -883,6 +894,7 @@ names:
 - Mehande
 - Meira
 - Melisande
+- Melvina
 - Merula
 - Midiga
 - Minha
@@ -950,6 +962,7 @@ names:
 - Renfrew
 - Resha
 - Reslyn
+- Reyith
 - Rhays
 - Rhiannon
 - Rhyanon
@@ -1040,6 +1053,7 @@ names:
 - Welisarne
 - Wellisa
 - Wesolyne
+- Wintress
 - Wren
 - Wyeta
 - Xara
@@ -1074,6 +1088,7 @@ names:
 - Zrye
 - Zyneste
 - Zynoa
+
 # "Male" names
 - Abaet
 - Abarden
@@ -1195,6 +1210,7 @@ names:
 - Chamon
 - Chaniel
 - Chesmarn
+- Chork
 - Chidak
 - Cid
 - Cibrock
@@ -1376,6 +1392,7 @@ names:
 - Hagalbar
 - Halmar
 - Hamish
+- Harkin
 - Harrenhal
 - Hasten
 - Hawke
@@ -1481,6 +1498,7 @@ names:
 - Lephidiles
 - Lerin
 - Lesphares
+- Lessard
 - Letor
 - Lidorn
 - Lin
