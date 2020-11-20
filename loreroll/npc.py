@@ -1,8 +1,8 @@
 """Module for generating NPCs."""
 
 import hashlib
+import json
 import os
-import pickle
 import random
 from collections import namedtuple
 
@@ -20,8 +20,8 @@ NPC = namedtuple(
     ]
 )
 
-NPC_BINARY_FILENAME = os.path.join(os.path.dirname(__file__), 'data/npc.bin')
 NPC_FILENAME = os.path.join(os.path.dirname(__file__), 'data/npc.yaml')
+NPC_JSON_FILENAME = os.path.join(os.path.dirname(__file__), 'data/npc.json')
 
 NPC_SCHEMA = Map({
     'races': Seq(Map({'v': Str(), 'w': Float()})),
@@ -36,44 +36,40 @@ NPC_SCHEMA = Map({
 def _read_data():
     """Read NPC data.
 
-    Parsing YAML turned out to be really slow -> The function attempts to read
-    the pre-parsed binary version. If that fails or if it has been generated
-    for a different YAML data version, read the source YAML and try and store
-    the data in binary format for future runs.
+    Parsing StrictYAML turned out to be really slow -> The function attempts
+    to read the pre-parsed JSON version. If that fails or if it has been
+    generated for a different YAML data version, read the source YAML and try
+    and store the data in JSON format for future runs.
     """
 
     def _handle_caching_error(operation, error):
         # Catch and ignore (just print warning) any error. This is just
         # "caching" and we want to continue with the rest in any case.
         print(
-            f'WARNING: Could not {operation} the cache binary file '
-            f'("{NPC_BINARY_FILENAME}"): {error}'
+            f'WARNING: Could not {operation} the cache JSON file '
+            f'("{NPC_JSON_FILENAME}"): {error}'
         )
 
     with open(NPC_FILENAME, 'r') as yaml_datafile:
         yaml_data = yaml_datafile.read()
         yaml_data_checksum = hashlib.sha512(yaml_data.encode()).hexdigest()
 
-        # Try to read NPC_BINARY_FILENAME ("cached" binary version).
+        # Try to read NPC_JSON_FILENAME ("cached"  version).
         try:
-            with open(NPC_BINARY_FILENAME, 'rb') as binary_datafile:
-                checksum, npc_data = pickle.load(binary_datafile)
-                if yaml_data_checksum == checksum:
-                    # It has been generated from the current NPC_FILENAME.
+            with open(NPC_JSON_FILENAME, 'r') as json_datafile:
+                npc_data = json.load(json_datafile)
+                checksum = npc_data.pop('yaml_datafile_checksum')
+                if checksum == yaml_data_checksum:
                     return npc_data
-                else:
-                    print('INFO: Source YAML file has been changed.')
         except Exception as error:
             _handle_caching_error('read', error)
 
         # At this point we indeed need to parse the YAML data. Let's do so and
-        # try and store the parsed data into a binary file for future runs.
-        npc_data = load(yaml_data, NPC_SCHEMA)
+        # try and store the parsed data into a JSON file for future runs.
+        npc_data = load(yaml_data, NPC_SCHEMA).data
         try:
-            pickle.dump(
-                (yaml_data_checksum, npc_data),
-                open(NPC_BINARY_FILENAME, 'wb')
-            )
+            npc_data['yaml_datafile_checksum'] = yaml_data_checksum
+            json.dump(npc_data, open(NPC_JSON_FILENAME, 'w'))
         except Exception as error:
             _handle_caching_error('store', error)
         return npc_data
