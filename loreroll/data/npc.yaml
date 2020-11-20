@@ -93,6 +93,10 @@ age:
 
 physical:
 # build
+- abnormally fat
+- abnormally short
+- abnormally tall
+- abnormally thin
 - agile
 - athletic
 - brawny
@@ -104,11 +108,16 @@ physical:
 - fat
 - feeble
 - fit
-- hourglass
+- hourglass figure
+- hunchback
 - hunched
 - lanky
+- large butt
+- large hips
 - medium build
 - muscular
+- muscular arms
+- muscular legs
 - obese
 - overweight
 - plump
@@ -154,15 +163,23 @@ physical:
 # (facial) hair
 - afro
 - bald
+- beads in hair/beard
 - beard
 - braided beard
 - braids
+- bushy hair
+- bushy beard
 - clean-shaven
+- colored hair/beard
 - dreadlocks
+- fake hair
+- fake beard
 - full beard
+- glorious beard
 - goatee
 - greasy hair
 - handlebar beard
+- long beard
 - long hair
 - messy hair
 - mohawk
@@ -175,15 +192,21 @@ physical:
 - shoulder-length hair
 - stubble
 - thinning hair
+- thin/sparse beard
 - unusual hair color
+- wig
 
 # clothes
+- bright clothes
 - clean clothes
+- colorful clothes
+- dark clothes
 - dirty clothes
 - flamboyant clothes
 - formal clothes
 - outlandish clothes
 - ragged clothes
+- vibrant clothes
 - well dressed
 
 # jewelry
@@ -217,10 +240,23 @@ physical:
 - subtle ring(s)
 
 # other
+- acid burn
+- acne scars
 - almost blind
 - almost deaf
-- arm missing
+- artificial arm
+- artificial claw instead of hand
+- artificial ear
+- artificial eye
+- artificial eyebrows
+- artificial finger(s)
+- artificial fingernail(s)
+- artificial hand
+- artificial leg
+- artificial nose
+- artificial teeth
 - attractive
+- bags under eyes
 - big ears
 - big eyes
 - big nose
@@ -231,25 +267,33 @@ physical:
 - blushing
 - broken nose
 - broken jaw
+- bruise(s)
 - cain
 - clean
 - clean teeth
+- crooked mouth
 - crooked nose
 - cross-eyed
 - crutches
 - cute
 - deaf
 - deep voice
+- different arm length
+- different foot size
+- different hand size
+- different leg length
 - dimple in chin
 - dimples in cheeks
 - dirty
 - distinctive nose
-- ear missing
 - earrings
 - exceptionally beautiful
 - exceptionally ugly
+- extra finger
 - extravagant
 - eyes twitch
+- fang(s)
+- forked tongue
 - fur on a part of body
 - glass eye
 - glasses
@@ -259,25 +303,31 @@ physical:
 - high-pitched voice
 - hook instead of a hand
 - hooked nose
+- horn(s)
 - huge scar
-- leg missing
 - limping
 - long nails
 - loud voice
 - mismatched eyes color
+- missing arm
+- missing ear
 - missing eye
 - missing eyebrows
 - missing finger(s)
 - missing fingernail(s)
+- missing hand
+- missing leg
+- missing nose
 - missing teeth
 - monocle
 - mute
-- nose missing
 - overbite
 - pointy chin
+- pointy nose
 - pointy teeth
 - pretty
 - ragged
+- runes carved into skin
 - scales on a part of body
 - scar across face
 - scar(s)
@@ -288,6 +338,8 @@ physical:
 - small nose
 - smokepipe
 - spectacles
+- swollen eye
+- tail
 - tattooed
 - tattooed face
 - thick eyebrows
@@ -303,39 +355,99 @@ physical:
 
 
 personality:
-- absentminded
+- able
+- abrasive
+- abrupt
+- absent-minded
+- abusive
+- accepting
+- accomodating
+- accomplished
+- active
+- adaptable
+- ADHD
+- addict
+- adorable
 - adventurous
+- affectionate
+- affraid
 - aggresive
+- agnostic
+- agreeable
 - aimless
 - alcoholic
+- alert
+- alluring
+- altruistic
+- always drunk
+- always hungry
+- always late
 - amiable
 - ambitious
 - amoral
+- analytical
 - angry
+- annoyed
+- annoying
+- anti-social
 - anxious
 - apathetic
+- apologetic
 - appreciative
+- approachable
 - argumentative
 - arrogant
 - articulate
+- artistic
+- ashamed
 - asocial
 - aspiring
 - assertive
 - attentive
+- audacious
+- austere
 - authoritarian
+- avant-garde
+- average
+- awkward
+- babbling
+- babyish
+- bad loser
 - barbaric
+- bashful
+- belligerent
 - benevolent
+- bewildered
+- bigoted
 - bites fingernails
+- bitter
 - bizarre
+- blaming
+- blunt
+- boastful
 - bold
+- bookworm
 - bored
+- bossy
+- brainy
+- bratty
 - brave
+- brazen
+- bright
 - brilliant
 - brittle
+- brotherly
 - brutal
+- brutish
+- bully
 - businesslike
+- busy
 - calculating
+- callous
 - calm
+- candid
+- can-do attitude
+- can't-do attitude
 - capable
 - careless
 - caring
@@ -344,174 +456,373 @@ personality:
 - charismatic
 - charitable
 - charming
+- chaste
+- chatty
 - cheater
 - cheerful
-- cheewing
+- cheerless
+- chewing
 - childish
+- chivalrous
+- civilised
+- classy
 - clever
 - clumsy
+- coarse
+- cocky
+- coherent
+- cold
+- cold-hearted
+- collector
+- committed
+- communicative
 - compassionate
+- competent
 - competitive
+- composed
 - compulsive
+- concerned
+- condescending
 - confident
-- conforming
+- conformist
+- confused
 - conservative
+- considerate
+- consistent
+- conspiracy theorist
+- content
+- conversational
+- cooperative
+- coquettish
 - courageous
 - courteous
 - cowardly
+- cowering
+- coy
 - crazy
 - creative
+- credible
+- creepy
 - critical
+- crude
 - cruel
+- cryptic
+- cuddly
 - cultured
 - cunning
 - curious
+- cursed
+- cursing
+- cutthroat
 - cynical
+- dainty
+- dangerous
 - daring
+- dark
+- dashing
+- dauntless
+- dazzling
 - decadent
 - deceitful
 - decent
 - deceptive
 - decisive
+- decorous
 - dedicated
+- deep
+- defeated
+- defiant
 - delicate
 - demanding
 - dependable
+- dependent
+- depressed
+- deranged
 - desperate
+- despicable
 - destructive
 - determined
+- devious
+- devoted
 - dignified
+- dilligent
 - dim-witted
+- diplomatic
+- direct
+- disagreeable
 - disciplined
+- discouraged
 - discouraging
 - discreet
+- disgusting
 - dishonest
+- disillusioned
+- disinterested
 - disloyal
 - disobedient
 - disorderly
 - disorganized
 - disrespectful
 - disruptive
+- dissatisfied
+- distant
+- distrought
+- disturbed
 - dogmatic
+- dominant
 - dominating
 - doom-sayer
+- dorky
 - doubtful
 - dramatic
 - dreamy
+- dreary
 - driven
+- drunk
+- dubious
+- dull
 - dumb
 - dutiful
+- dynamic
+- dyslexic
+- eager
 - easily distracted
+- easy-going
+- eccentric
 - educated
+- efficient
 - egocentric
 - egoistical
+- elated
 - elegant
 - eloquent
-- empathetic
+- embarrassed
 - emotional
+- empathetic
 - encouraging
 - energetic
+- engaging
 - enthusiastic
 - envious
 - erratic
+- ethical
+- evasive
+- evil
 - excited
+- extravagant
 - extrovert
+- fabulous
 - fair
 - faithful
+- faithless
 - family person
 - famous
 - fanatical
+- fascinated
+- fast-talker
+- fatalistic
 - fearless
+- feisty
+- femme fatale
+- ferocious
+- fickle
+- fidgety
+- fierce
 - fiery
+- filthy
+- finicky
 - firm
+- fixated
+- flamboyant
 - flexible
+- flirty
+- flustered
 - focused
 - folksy
 - foolish
+- forceful
 - forgetful
 - forgiving
 - formal
 - forthright
+- foul
+- frank
+- frantic
+- fretful
 - friendly
+- frightened
+- frustrated
 - fun-loving
 - funny
+- furious
+- fussy
 - gallant
 - generous
+- genial
 - gentle
 - genuine
+- giving
+- glamorous
+- glum
 - good-natured
+- goofy
+- gossipy
 - glamorous
 - gloomy
+- gluttonous
+- graceful
 - gracious
+- grandiose
+- grateful
 - greedy
+- grieving
 - grim
+- growly
+- gruesome
+- gruff
 - grumpy
+- guarded
 - guileless
+- guilty
 - gullible
+- haggling
 - happy
+- hardened
 - hardworking
+- harsh
 - hateful
+- heartbroken
+- heartless
+- hedonistic
 - helpful
+- helpless
 - hesitant
 - high voice
 - high-spirited
+- hilarious
+- hillbilly
 - honest
 - honorable
+- hopeful
+- hopeless
+- hospitable
 - hostile
 - hot-headed
 - hot-tempered
 - humble
 - humming
+- humorous
+- humourless
 - hungry for fame
+- hypochondriac
+- hypocritical
+- hysterical
 - idealistic
+- idiotic
 - ignorant
 - ill-mannered
+- illiterate
 - imaginative
+- immature
+- immodest
+- impartial
 - impatient
+- impolite
 - impractical
 - impulsive
+- inactive
+- incompetent
 - inconsiderate
+- inconsistent
 - incorruptible
 - indecisive
 - independent
 - indifferent
 - individualistic
+- indulgent
+- inept
+- infamous
 - innovative
+- inquisitive
 - insecure
 - insensitive
 - insightful
 - insincere
+- insistent
 - inspiring
 - insulting
+- intellectual
 - intelligent
+- interested
+- interrupting
+- intimidating
 - intollerant
+- introspective
 - introvert
+- intuitive
+- involved
 - irrational
 - irreligious
+- irresolute
 - irresponsible
 - irritable
+- irritating
+- jack of all trades
+- jackass
 - jealous
+- jerk
 - joker
-- judging
+- jolly
+- jovial
+- joyful
+- judgemental
 - just
 - keen
 - kind
 - knowledgeable
+- know-it-all
+- lascivious
 - lazy
 - leader
+- lethargic
+- lewd
+- liar
 - liberal
+- likeable
+- lively
+- logical
 - lovable
+- love-struck
 - loving
 - low voice
+- low confidence
 - loyal
+- lucky
+- lunatic
+- macho
+- mad
 - malicious
+- manipulative
 - mannered
 - mannerless
+- masochist
+- materialistic
+- mature
 - mean
 - meddlesome
+- meek
+- megalomaniac
 - melancholic
+- melodramatic
+- merciful
+- merciless
+- mild
+- militant
+- misanthrope
+- mischievous
 - miserable
 - misguided
+- mistrusting
 - modest
 - money-minded
 - moody
@@ -519,18 +830,34 @@ personality:
 - mysterious
 - mystical
 - naive
+- narcissistic
 - narrow-minded
+- nasty
 - nationalist
+- naughty
 - neat
 - negativistic
 - neglectful
+- nerd
+- nervous
 - neurotic
 - neutral
+- nice
 - nihilistic
+- nit picker
+- noble
+- noisy
+- nonchalant
 - noncommittal
 - noncompetitive
+- non-violent
+- nosey
+- nut
 - obedient
+- obliging
 - oblivious
+- obnoxious
+- obscene
 - observant
 - obsessive
 - odd
@@ -538,165 +865,354 @@ personality:
 - open-minded
 - opinionated
 - opportunistic
+- oppressor
 - optimistic
 - orderly
 - ordinary
 - organized
+- ostentatious
+- outgoing
+- outrageous
 - outspoken
+- over-confident
+- over-educated
+- over-protective
+- pacifist
 - pacing
+- panicky
 - paranoid
+- particular
 - passionate
 - passive
+- passive-aggresive
+- pathetic
 - patient
 - patriotic
+- peaceful
 - pedantic
 - perceptive
+- perfect
+- perfect manners
+- perfectionist
+- performer
 - persistent
 - persuasive
+- pert
 - perverse
 - pessimistic
+- pest
+- petty
+- philosophical
+- philantropic
 - picky
+- pious
+- pitiful
+- playful
 - pleasant
+- plotting
 - polite
 - pompous
+- poor
 - popular
+- positive
 - possessive
 - power-hungry
 - practical
 - precise
+- predictable
 - prejudiced
+- preoccupied
 - pretentious
+- primitive
 - principled
 - private
 - procrastinating
+- productive
+- profane
+- professional
 - progressive
+- promiscuous
+- proper
+- prophetic
+- proselytizer
 - protective
 - provocative
 - proud
 - prudent
+- psychotic
 - punctual
 - pure
+- purposeful
+- pushy
+- puzzled
 - quarrelsome
+- quick
 - quiet
 - quirky
 - racist
+- rambunctious
 - rational
 - realistic
+- reasonable
+- rebel
+- receptive
 - reckless
+- reflective
 - regretful
 - relaxed
 - reliable
 - religious
+- reluctant
+- remorseful
+- remorseless
 - resentful
 - reserved
+- resilient
+- resolute
 - respectful
 - responsible
+- restless
 - revengeful
+- rhetorical
 - rigid
+- rigorous
+- risk-taking
 - ritualistic
 - romantic
+- rough
 - rowdy
 - rude
+- rugged
+- ruthless
+- sacrificing
+- sad
 - sadistic
+- sagely
+- saintly
 - sarcastic
+- sassy
+- satisfied
+- savage
 - scandalous
+- scared
+- scary
 - sceptical
 - scheming
 - scornful
 - seclusive
 - secretive
+- secure
+- seducer
+- seductive
+- selective
 - self-centered
+- self-confident
 - self-conscious
+- self-controlling
 - self-critical
+- self-destructive
+- self-directed
+- self-disciplined
+- self-important
+- self-pitying
 - self-reliant
+- self-righteous
 - self-sacrificing
 - selfish
 - selfless
+- senile
 - sensitive
+- sensual
 - sentimental
+- serene
 - serious
+- sexist
+- sexual
 - shallow
 - shameful
+- shameless
 - sharing
+- sharp
+- sharp-tongued
+- sharp-witted
+- sheepish
+- shifty
 - shortsighted
+- shrewd
 - shy
+- silent
 - silly
+- simple
 - sincere
 - singing
 - skillful
+- slacker
+- sleazy
+- slimy
 - sloppy
 - slow
+- slutty
 - sly
+- small-minded
+- smart
+- smart ass
+- smiling
+- snarky
 - sneaky
+- snob
 - sociable
 - soft
 - soft-hearted
 - solemn
 - solitary
 - sophisticated
+- sore
 - speaks loudly
 - speaks silently
+- spineless
 - spiritual
+- spiteful
+- spoiled
 - spontaneous
 - staring
+- stern
+- stimulating
+- stingy
 - stoic
 - stupid
+- strange
 - strict
+- strong-willed
 - stubborn
+- studious
+- stupid
 - stutters
 - stylish
 - submissive
 - sullen
+- sultry
 - superstitious
+- supportive
 - surly
 - suspicious
+- sweet
 - swindler
 - sympathetic
 - systematic
+- tacky
+- tactful
 - tactless
+- talented
 - talkative
 - taps fingers
+- technophobic
+- temperamental
 - tense
+- terrified
+- thankful
+- thankless
+- theatrical
+- thick-skinned
+- thorough
+- thoughtful
 - thoughtless
+- threatening
+- thick
+- thrilled
 - tidy
+- tight
 - timid
+- tired
+- tireless
+- tiresome
 - tolerant
+- touchy
 - traditionalist
 - transparent
 - treacherous
+- troubled
+- troublemaker
 - troublesome
 - trusting
+- trustworthy
+- truthful
 - tugs hair/beard
 - twirls hair/beard
 - unaggressive
 - unambitious
 - unappreciative
+- unassuming
+- unbiased
 - uncaring
 - uncertain
+- unconcerned
+- unconventional
 - unconvincing
 - uncooperative
+- uncoordinated
+- undependable
 - understanding
 - undisciplined
+- unfocused
 - unfriendly
 - ungrateful
+- unhappy
+- unhelpful
 - unimaginative
+- unkind
+- unlucky
+- unmotivated
 - unpredictable
 - unprincipled
 - unreliable
+- unruly
+- unscrupulous
+- unselfish
 - unsentimental
 - unstable
-- unruly
+- unsure
+- unsympathetic
+- unsystematic
+- untrustworthy
+- unwilling
 - upright
+- upset
+- uptight
+- useful
 - vague
+- vain
+- valiant
+- vegan
+- vegetarian
+- vengeful
+- verbose
 - vindictive
+- violent
+- virtuous
+- vivacious
+- volatile
 - vulgar
+- vulnerable
 - warm
+- wary
+- weak-willed
+- weird
+- well-travelled
 - whimsical
+- whiny
 - whispers
 - whistling
+- wicked
+- wild
 - wise
 - wishful
+- withdrawn
 - witty
+- worried
+- wretched
+- youthful
+- xenophobic
+- zealous
 
 
 names:
