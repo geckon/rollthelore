@@ -132,3 +132,48 @@ Appearance: big nose, scarred, sinewy
 Personality: grim, regretful, naive
 
 ```
+
+### Seeding
+
+Let's say you generated this lovely duo and you want to keep it for the future.
+
+```
+$ rollnpc.py -n2
+Seed used: '6095344300345411392'. Run with '-s 6095344300345411392' to get the same result.
+
+Name: Macon
+Age: older
+Race: half-elf
+Class: bard
+Appearance: big eyes, muttonchops
+Personality: intellectual, secretive
+
+Name: Sirius
+Age: very old
+Race: human
+Class: cleric
+Appearance: different hand size, dimple in chin
+Personality: speaks silently, hypochondriac
+```
+
+You can either save the whole text or just the seed and generate the same
+data again like this:
+
+```
+$ rollnpc.py -n2 -s 6095344300345411392
+Seed used: '6095344300345411392'. Run with '-s 6095344300345411392' to get the same result.
+
+Name: Macon
+Age: older
+Race: half-elf
+Class: bard
+Appearance: big eyes, muttonchops
+Personality: intellectual, secretive
+
+Name: Sirius
+Age: very old
+Race: human
+Class: cleric
+Appearance: different hand size, dimple in chin
+Personality: speaks silently, hypochondriac
+```
