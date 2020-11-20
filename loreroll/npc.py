@@ -55,7 +55,6 @@ def _read_data():
         yaml_data_checksum = hashlib.sha512(yaml_data.encode()).hexdigest()
 
         # Try to read NPC_BINARY_FILENAME ("cached" binary version).
-        #if os.path.exists(NPC_BINARY_FILENAME):
         try:
             with open(NPC_BINARY_FILENAME, 'rb') as binary_datafile:
                 checksum, npc_data = pickle.load(binary_datafile)
