@@ -1,6 +1,8 @@
 """Module for generating NPCs."""
 
+import hashlib
 import os
+import pickle
 import random
 from collections import namedtuple
 
@@ -18,6 +20,7 @@ NPC = namedtuple(
     ]
 )
 
+NPC_BINARY_FILENAME = os.path.join(os.path.dirname(__file__), 'data/npc.bin')
 NPC_FILENAME = os.path.join(os.path.dirname(__file__), 'data/npc.yaml')
 
 NPC_SCHEMA = Map({
@@ -31,9 +34,50 @@ NPC_SCHEMA = Map({
 
 
 def _read_data():
-    """Read NPC data."""
-    with open(NPC_FILENAME, 'r') as datafile:
-        return load(datafile.read(), NPC_SCHEMA)
+    """Read NPC data.
+
+    Parsing YAML turned out to be really slow -> The function attempts to read
+    the pre-parsed binary version. If that fails or if it has been generated
+    for a different YAML data version, read the source YAML and try and store
+    the data in binary format for future runs.
+    """
+
+    def _handle_caching_error(operation, error):
+        # Catch and ignore (just print warning) any error. This is just
+        # "caching" and we want to continue with the rest in any case.
+        print(
+            f'WARNING: Could not {operation} the cache binary file '
+            f'("{NPC_BINARY_FILENAME}"): {error}'
+        )
+
+    with open(NPC_FILENAME, 'r') as yaml_datafile:
+        yaml_data = yaml_datafile.read()
+        yaml_data_checksum = hashlib.sha512(yaml_data.encode()).hexdigest()
+
+        # Try to read NPC_BINARY_FILENAME ("cached" binary version).
+        #if os.path.exists(NPC_BINARY_FILENAME):
+        try:
+            with open(NPC_BINARY_FILENAME, 'rb') as binary_datafile:
+                checksum, npc_data = pickle.load(binary_datafile)
+                if yaml_data_checksum == checksum:
+                    # It has been generated from the current NPC_FILENAME.
+                    return npc_data
+                else:
+                    print('INFO: Source YAML file has been changed.')
+        except Exception as error:
+            _handle_caching_error('read', error)
+
+        # At this point we indeed need to parse the YAML data. Let's do so and
+        # try and store the parsed data into a binary file for future runs.
+        npc_data = load(yaml_data, NPC_SCHEMA)
+        try:
+            pickle.dump(
+                (yaml_data_checksum, npc_data),
+                open(NPC_BINARY_FILENAME, 'wb')
+            )
+        except Exception as error:
+            _handle_caching_error('store', error)
+        return npc_data
 
 
 NPC_DATA = _read_data()
