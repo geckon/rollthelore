@@ -40,11 +40,22 @@ def _read_data():
     to read the pre-parsed JSON version. If that fails or if it has been
     generated for a different YAML data version, read the source YAML and try
     and store the data in JSON format for future runs.
-    """
 
+    Note that this approach could theoretically cause trouble if the user
+    didn't have write permission to the JSON file but if the appropriate JSON
+    data is shipped along with YAML source data, this shouldn't be an issue.
+    JSON will only be regenerated if YAML changes and if user can modify YAML,
+    write permission to JSON should be available as well since these two are in
+    the same directory. And even if that somehow isn't true, the consequence is
+    "only" a performance drop.
+
+    Still there probably is a better solution - see github issue #53:
+    https://github.com/geckon/rollthelore/issues/53
+    """
     def _handle_caching_error(operation, error):
-        # Catch and ignore (just print warning) any error. This is just
-        # "caching" and we want to continue with the rest in any case.
+        """Print just a warning.
+
+        This is "caching" and we want to continue in any case."""
         print(
             f'WARNING: Could not {operation} the cache JSON file '
             f'("{NPC_JSON_FILENAME}"): {error}'
@@ -69,7 +80,8 @@ def _read_data():
         npc_data = load(yaml_data, NPC_SCHEMA).data
         try:
             npc_data['yaml_datafile_checksum'] = yaml_data_checksum
-            json.dump(npc_data, open(NPC_JSON_FILENAME, 'w'))
+            with open(NPC_JSON_FILENAME, 'w') as json_datafile:
+                json.dump(npc_data, json_datafile)
         except Exception as error:
             _handle_caching_error('store', error)
         return npc_data
