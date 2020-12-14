@@ -36,7 +36,7 @@ tests = ["coverage", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "zope.i
 
 [[package]]
 name = "bandit"
-version = "1.6.3"
+version = "1.7.0"
 description = "Security oriented static analyser for python code."
 category = "dev"
 optional = false
@@ -356,7 +356,7 @@ testing = ["jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6"
-content-hash = "5e0ed6ea026ab5ef68f7770ae21e7dad3f27ab6cc7a091fa1150efc54272a5cd"
+content-hash = "4b24f3f23ecbe3850f71d889a79035fa720f484302b0daaafceb66f104fec4f3"
 
 [metadata.files]
 astroid = [
@@ -372,8 +372,8 @@ attrs = [
     {file = "attrs-19.3.0.tar.gz", hash = "sha256:f7b7ce16570fe9965acd6d30101a28f62fb4a7f9e926b3bbc9b61f8b04247e72"},
 ]
 bandit = [
-    {file = "bandit-1.6.3-py2.py3-none-any.whl", hash = "sha256:2ff3fe35fe3212c0be5fc9c4899bd0108e2b5239c5ff62fb174639e4660fe958"},
-    {file = "bandit-1.6.3.tar.gz", hash = "sha256:d02dfe250f4aa2d166c127ad81d192579e2bfcdb8501717c0e2005e35a6bcf60"},
+    {file = "bandit-1.7.0-py3-none-any.whl", hash = "sha256:216be4d044209fa06cf2a3e51b319769a51be8318140659719aa7a115c35ed07"},
+    {file = "bandit-1.7.0.tar.gz", hash = "sha256:8a4c7415254d75df8ff3c3b15cfe9042ecee628a1e40b44c15a98890fbfc2608"},
 ]
 click = [
     {file = "click-7.1.2-py2.py3-none-any.whl", hash = "sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"},
