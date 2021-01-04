@@ -307,7 +307,7 @@ six = ">=1.10.0"
 
 [[package]]
 name = "strictyaml"
-version = "1.1.1"
+version = "1.2.0"
 description = "Strict, typed YAML parser"
 category = "main"
 optional = false
@@ -356,7 +356,7 @@ testing = ["jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6"
-content-hash = "393a3ac8a1e13dce7ed3fd816a3d3e060c98571a4b57221ea4d0f0ceda01f5c8"
+content-hash = "991d0afc0b03e33afb001f6851ca507f0823f4579992c9cfccc11273cadd00cd"
 
 [metadata.files]
 astroid = [
@@ -518,7 +518,7 @@ stevedore = [
     {file = "stevedore-1.32.0.tar.gz", hash = "sha256:18afaf1d623af5950cc0f7e75e70f917784c73b652a34a12d90b309451b5500b"},
 ]
 strictyaml = [
-    {file = "strictyaml-1.1.1.tar.gz", hash = "sha256:ea2bb97aacc12fff7df11bd4cb4ae64b1418a0311fbd1611445cc59dc650bdd3"},
+    {file = "strictyaml-1.2.0.tar.gz", hash = "sha256:55870ca32242c567654032a7b39182268ccf7c298fa0103170f8c8acaa64d274"},
 ]
 toml = [
     {file = "toml-0.10.1-py2.py3-none-any.whl", hash = "sha256:bda89d5935c2eac546d648028b9901107a595863cb36bae0c73ac804a9b4ce88"},
