@@ -18,7 +18,7 @@ click = "~7.1.2"
 bandit = "^1.7.0"
 pylint = "^2.8.2"
 pycodestyle = "^2.7.0"
-pytest = "^6.2.3"
+pytest = "^6.2.4"
 
 [tool.poetry.scripts]
 rollnpc = 'rollnpc:generate'
