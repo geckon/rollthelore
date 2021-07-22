@@ -16,7 +16,7 @@ click = ">=7.1.2,<8.1.0"
 
 [tool.poetry.dev-dependencies]
 bandit = "^1.7.0"
-pylint = "^2.9.4"
+pylint = "^2.9.5"
 pycodestyle = "^2.7.0"
 pytest = "^6.2.4"
 
