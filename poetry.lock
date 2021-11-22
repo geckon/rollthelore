@@ -303,7 +303,7 @@ pbr = ">=2.0.0,<2.1.0 || >2.1.0"
 
 [[package]]
 name = "strictyaml"
-version = "1.5.0"
+version = "1.6.0"
 description = "Strict, typed YAML parser"
 category = "main"
 optional = false
@@ -359,7 +359,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6"
-content-hash = "6f75f34874c1683260c023df6a7359d20d8d6f1d0fb1c3f1499b9fdbb8662fc8"
+content-hash = "2e22d7922bfcf04233a25b17d9fc499d10fe32c1af389b71f0ea081a36e72f3f"
 
 [metadata.files]
 astroid = [
@@ -518,7 +518,7 @@ stevedore = [
     {file = "stevedore-3.4.0.tar.gz", hash = "sha256:59b58edb7f57b11897f150475e7bc0c39c5381f0b8e3fa9f5c20ce6c89ec4aa1"},
 ]
 strictyaml = [
-    {file = "strictyaml-1.5.0.tar.gz", hash = "sha256:273a6382cc98a404d20779351cd5bb12e746397fbe18a8e9ccec4ae3c0ffa0e2"},
+    {file = "strictyaml-1.6.0.tar.gz", hash = "sha256:73fa9769214a310486d7916453a09bd38b07d28a9dcbdf27719183c1d7d949f6"},
 ]
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
