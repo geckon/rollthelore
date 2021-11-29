@@ -303,7 +303,7 @@ pbr = ">=2.0.0,<2.1.0 || >2.1.0"
 
 [[package]]
 name = "strictyaml"
-version = "1.6.0"
+version = "1.6.1"
 description = "Strict, typed YAML parser"
 category = "main"
 optional = false
@@ -518,7 +518,7 @@ stevedore = [
     {file = "stevedore-3.4.0.tar.gz", hash = "sha256:59b58edb7f57b11897f150475e7bc0c39c5381f0b8e3fa9f5c20ce6c89ec4aa1"},
 ]
 strictyaml = [
-    {file = "strictyaml-1.6.0.tar.gz", hash = "sha256:73fa9769214a310486d7916453a09bd38b07d28a9dcbdf27719183c1d7d949f6"},
+    {file = "strictyaml-1.6.1.tar.gz", hash = "sha256:688be16ee5d1a2f94aa4abdc6d881e8e254d173d724ac88725955fe66bdb63d4"},
 ]
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
