@@ -166,6 +166,10 @@ def _filter_structured_data(data_set, allowed=None, disallowed=None):
     return filtered
 
 
+def generate_name():
+    return str(random.choice(NPC_DATA['names']))  # nosec
+
+
 def generate_npc(traits, ages=None, classes=None, races=None):
     """Generate an NPC.
 
@@ -183,7 +187,7 @@ def generate_npc(traits, ages=None, classes=None, races=None):
     else:
         class_ = None
 
-    name = str(random.choice(NPC_DATA['names']))  # nosec
+    name = generate_name()
 
     race = str(_weighted_random(races))
 

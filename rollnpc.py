@@ -7,7 +7,7 @@ import sys
 
 import click
 
-from loreroll.npc import generate_npcs
+from loreroll.npc import generate_name, generate_npcs
 
 
 def print_npc(npc):
@@ -34,6 +34,8 @@ def print_npc(npc):
               help='Allowed class(es).')
 @click.option('--class-disallowed', '-C', 'classes_no', multiple=True,
               help='Disallowed class(es).')
+@click.option('--names-only', is_flag=True, default=False,
+              help='Generate only NPC names')
 @click.option('--number', '-n', default=1,
               help='Number of NPCs to generate.')
 @click.option('--race-allowed', '-r', 'races_yes', multiple=True,
@@ -45,9 +47,8 @@ def print_npc(npc):
                    'produce the same results.')
 @click.option('--traits', '-t', 'traits', type=click.IntRange(0, 9),
               default=2, help='Number of traits generated.')
-def generate(adventurers=True, number=1, ages_yes=None, ages_no=None,
-             classes_yes=None, classes_no=None, traits=2,
-             races_yes=None, races_no=None, seed=None):
+def generate(adventurers, ages_yes, ages_no, classes_yes, classes_no,
+             names_only, number, races_yes, races_no, seed, traits):
     """Generate 'number' of NPCs and print them."""
     filters = {
         'ages_no': ages_no,
@@ -67,6 +68,11 @@ def generate(adventurers=True, number=1, ages_yes=None, ages_no=None,
     print(f"Seed used: '{seed}'. Run with '-s {seed}' to get the same "
           f"result.\n")
 
+    if names_only:
+        for _ in range(number):
+            print(generate_name())
+        return
+
     npcs = generate_npcs(
         number,
         traits=traits,
@@ -80,4 +86,4 @@ def generate(adventurers=True, number=1, ages_yes=None, ages_no=None,
 
 
 if __name__ == '__main__':
-    generate()
+    generate()  # pylint: disable=no-value-for-parameter
