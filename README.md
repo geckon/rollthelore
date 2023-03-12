@@ -44,92 +44,125 @@ pip install rollthelore
 
 ```
 $ rollnpc --help
-Usage: rollnpc [OPTIONS]
+Usage: rollnpc.py [OPTIONS]
 
   Generate 'number' of NPCs and print them.
 
 Options:
-  -a, --age-allowed TEXT       Allowed age(s).
-  -A, --age-disallowed TEXT    Disallowed age(s).
-  -c, --class-allowed TEXT     Allowed class(es).
-  -C, --class-disallowed TEXT  Disallowed class(es).
-  -d, --detail-level INTEGER   Amount of details generated (one or higher).
-  -n, --number INTEGER         Number of NPCs to generate.
-  -r, --race-allowed TEXT      Allowed race(s).
-  -R, --race-disallowed TEXT   Disallowed race(s).
-  --help                       Show this message and exit.
+  --adventurers / --no-adventurers
+                                  Generate adventurers or civilians?
+  -a, --age-allowed TEXT          Allowed age(s).
+  -A, --age-disallowed TEXT       Disallowed age(s).
+  -c, --class-allowed TEXT        Allowed class(es).
+  -C, --class-disallowed TEXT     Disallowed class(es).
+  --names-only                    Generate only NPC names
+  -n, --number INTEGER            Number of NPCs to generate.
+  -r, --race-allowed TEXT         Allowed race(s).
+  -R, --race-disallowed TEXT      Disallowed race(s).
+  -s, --seed TEXT                 Seed number used to generate NPCs. The same
+                                  seed will produce the same results.
+  -t, --traits INTEGER RANGE      Number of traits generated.  [0<=x<=9]
+  --help                          Show this message and exit.
 ```
 
 ## Examples
 
 ```
 $ rollnpc
-Name: Zaniel
+Seed used: '3625060903250429453'. Run with '-s 3625060903250429453' to get the same result.
+
+Name: Anfar
 Age: older
 Race: tabaxi
-Class: monk
-Appearance: deaf, blind
-Personality: discouraging, disrespectful
+Class: barbarian
+Appearance: artificial ear, subtle ring(s)
+Personality: materialistic, dishonest
 ```
 
 ```
 $ rollnpc -n3
-Name: Iseult
-Age: old
-Race: dragonborn
-Class: fighter
-Appearance: cain, moustache
-Personality: courteous, foolish
+Seed used: '3098691926526726649'. Run with '-s 3098691926526726649' to get the same result.
 
-Name: Nyssa
-Age: adult
-Race: dragonborn
-Class: barbarian
-Appearance: hook instead of a hand, underbite
-Personality: miserable, suspicious
-
-Name: Briallan
-Age: older
+Name: Towerlock
+Age: middle aged
 Race: human
-Class: wizard
-Appearance: skinny, tall
-Personality: honorable, stylish
+Class: cleric
+Appearance: artificial finger(s), bruise(s)
+Personality: wretched, bitter
+
+Name: Leska
+Age: young
+Race: half-elf
+Class: sorcerer
+Appearance: visible Adam's apple, different leg length
+Personality: scary, unreliable
+
+Name: Marius
+Age: old
+Race: kobold
+Class: warlock
+Appearance: sexy, distinctive jewelry
+Personality: tireless, decadent
 ```
 
 ```
 $ rollnpc -n2 -r elf
-Name: Evadne
-Age: young
-Race: elf (wood)
-Class: ranger
-Appearance: silent voice, cute
-Personality: dependable, honorable
+Seed used: '8069506022788287187'. Run with '-s 8069506022788287187' to get the same result.
 
-Name: Ianthe
-Age: young
-Race: half-elf
-Class: warlock
-Appearance: handlebar beard, fire-burnt skin
-Personality: witty, organized
-```
+Name: Zerma
+Age: older
+Race: elf (dark - drow)
+Class: rogue
+Appearance: ugly, dreadlocks
+Personality: gruesome, emotional
 
-```
-$ rollnpc --detail-level 1
-Name: Séverin
-Age: young
-Race: tiefling
-Appearance: mute
-Personality: happy
-```
-
-```
-$ rollnpc --detail-level 3
-Name: Korbin
+Name: Ryfar
 Age: adult
-Race: gnome (forest)
-Class: ranger
-Appearance: big nose, scarred, sinewy
-Personality: grim, regretful, naive
+Race: elf (wood)
+Class: cleric
+Appearance: light, horn(s)
+Personality: childish, determined
+```
+
+```
+$ rollnpc --traits 1
+Seed used: '291255857363596163'. Run with '-s 291255857363596163' to get the same result.
+
+Name: Enidin
+Age: adult
+Race: aasimar
+Class: cleric
+Appearance: receding hair
+Personality: hardened
+```
+
+```
+$ rollnpc -t 3
+Seed used: '5732868273964053039'. Run with '-s 5732868273964053039' to get the same result.
+
+Name: Letor
+Age: older
+Race: dragonborn
+Class: sorcerer
+Appearance: plump, abnormally short, short hair
+Personality: bitter, scornful, sloppy
+```
+
+```
+$ rollnpc --no-adventurers -n 2 -t 1
+Seed used: '5305197205526584553'. Run with '-s 5305197205526584553' to get the same result.
+
+Name: Yorjan
+Age: adult
+Race: tiefling
+Appearance: big eyes
+Personality: foolish
+
+Name: Nalfar
+Age: adult
+Race: dragonborn
+Appearance: dreadlocks
+Personality: perverse
 
 ```
 
@@ -138,7 +171,7 @@ Personality: grim, regretful, naive
 Let's say you generated this lovely duo and you want to keep it for the future.
 
 ```
-$ rollnpc.py -n2
+$ rollnpc -n2
 Seed used: '6095344300345411392'. Run with '-s 6095344300345411392' to get the same result.
 
 Name: Macon
@@ -160,7 +193,7 @@ You can either save the whole text or just the seed and generate the same
 data again like this:
 
 ```
-$ rollnpc.py -n2 -s 6095344300345411392
+$ rollnpc -n2 -s 6095344300345411392
 Seed used: '6095344300345411392'. Run with '-s 6095344300345411392' to get the same result.
 
 Name: Macon
