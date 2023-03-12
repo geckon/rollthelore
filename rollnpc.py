@@ -17,8 +17,10 @@ def print_npc(npc):
     print(f'Race: {npc.race}')
     if npc.class_:
         print(f'Class: {npc.class_}')
-    print(f'Appearance: {", ".join(npc.physical)}')
-    print(f'Personality: {", ".join(npc.personality)}')
+    if npc.physical:
+        print(f'Appearance: {", ".join(npc.physical)}')
+    if npc.personality:
+        print(f'Personality: {", ".join(npc.personality)}')
     print()
 
 
