@@ -134,7 +134,7 @@ def _filter_string_data(data_set, allowed=(), disallowed=()):
     return filtered
 
 
-def _filter_structured_data(data_set, allowed=(), disallowed=()):
+def _filter_structured_data(data_set, allowed=None, disallowed=None):
     """Filters the given weighted data according to given filters.
 
     The data_set needs to be a sequence of dict-like objects with at
@@ -166,15 +166,15 @@ def _filter_structured_data(data_set, allowed=(), disallowed=()):
     return filtered
 
 
-def generate_npc(detail_level=2, ages=None, classes=None, races=None):
+def generate_name():
+    return str(random.choice(NPC_DATA['names']))  # nosec
+
+
+def generate_npc(traits, ages=None, classes=None, races=None):
     """Generate an NPC.
 
-    Detail level affects how much detailed the generated NPC will be.
-    Positive integer is expected, higher number means more details.
-    Default is meant to give the best results, detail level of one gives
-    just the bare minimum and with certain level of detail the NPCs tend
-    to start getting contradictory traits (like fat and slim at the same
-    time).
+    Traits parameter determines how many physical and personality traits
+    will be generated.
 
     Ages, classes and races are supposed to be sequences of allowed
     ages/classes/races. If None is passed instead of any of these,
@@ -182,19 +182,19 @@ def generate_npc(detail_level=2, ages=None, classes=None, races=None):
     """
     age = str(_weighted_random(ages))
 
-    if detail_level >= 2:
+    if classes:
         class_ = str(random.choice(classes))  # nosec
     else:
         class_ = None
 
-    name = str(random.choice(NPC_DATA['names']))  # nosec
+    name = generate_name()
 
     race = str(_weighted_random(races))
 
-    physical = random.choices(NPC_DATA['physical'], k=detail_level)
+    physical = random.choices(NPC_DATA['physical'], k=traits)
     physical = [str(trait) for trait in physical]
 
-    personality = random.choices(NPC_DATA['personality'], k=detail_level)
+    personality = random.choices(NPC_DATA['personality'], k=traits)
     personality = [str(trait) for trait in personality]
 
     return NPC(
@@ -207,15 +207,15 @@ def generate_npc(detail_level=2, ages=None, classes=None, races=None):
     )
 
 
-def generate_npcs(number=1, detail_level=2, filters=None):
+def generate_npcs(number=1, traits=2, filters=None,
+                  generate_adventurers=True):
     """Generate a number of NPCs.
 
-    Detail level affects how much detailed the generated NPCs will be.
-    Positive integer is expected, higher number means more details.
-    Default is meant to give the best results, detail level of one gives
-    just the bare minimum and with certain level of detail the NPCs tend
-    to start getting contradictory traits (like fat and slim at the same
-    time).
+    Traits parameter affects how much detailed the generated NPCs will
+    be. Non-negative integer is expected, higher number means more
+    details. Default is meant to give the best results and with certain
+    level of detail the NPCs tend to start getting contradictory traits
+    (like fat and slim at the same time).
 
     Filters are expected to be a dictionary with string keys like
     'races_yes' and 'races_no' and sequence values with traits that are
@@ -226,21 +226,24 @@ def generate_npcs(number=1, detail_level=2, filters=None):
     # filter the data
     if filters is None:
         filters = {}
+
     ages = _filter_structured_data(NPC_DATA['age'],
                                    filters.get('ages_yes'),
                                    filters.get('ages_no'))
-    # classes are not used for detail_level = 1
-    if detail_level >= 2:
+
+    # classes are only generated for adventurers
+    if generate_adventurers:
         classes = _filter_string_data(NPC_DATA['classes'],
                                       filters.get('classes_yes'),
                                       filters.get('classes_no'))
     else:
         classes = []
+
     races = _filter_structured_data(NPC_DATA['races'],
                                     filters.get('races_yes'),
                                     filters.get('races_no'))
 
     npcs = []
     for _ in range(number):
-        npcs.append(generate_npc(detail_level, ages, classes, races))
+        npcs.append(generate_npc(traits, ages, classes, races))
     return npcs

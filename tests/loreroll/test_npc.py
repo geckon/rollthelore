@@ -186,16 +186,16 @@ def test_generate_npcs():
     for npc in generate_npcs(npcs_count):
         _assert_npc_data_from_the_data_file(npc)
 
-    # Detail level 1
-    for npc in generate_npcs(npcs_count, detail_level=1):
+    # Civilians
+    for npc in generate_npcs(npcs_count, generate_adventurers=False):
         assert npc.class_ is None
         _assert_npc_data_from_the_data_file(npc)
 
     # Various default levels (incl. 1 to check the traits count)
-    for detail_level in range(1, 5):
-        for npc in generate_npcs(npcs_count, detail_level):
-            assert len(npc.physical) == detail_level
-            assert len(npc.personality) == detail_level
+    for traits in range(1, 5):
+        for npc in generate_npcs(npcs_count, traits):
+            assert len(npc.physical) == traits
+            assert len(npc.personality) == traits
             _assert_npc_data_from_the_data_file(npc)
 
 
