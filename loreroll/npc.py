@@ -134,7 +134,7 @@ def _filter_string_data(data_set, allowed=(), disallowed=()):
     return filtered
 
 
-def _filter_structured_data(data_set, allowed=(), disallowed=()):
+def _filter_structured_data(data_set, allowed=None, disallowed=None):
     """Filters the given weighted data according to given filters.
 
     The data_set needs to be a sequence of dict-like objects with at
@@ -182,7 +182,7 @@ def generate_npc(detail_level=2, ages=None, classes=None, races=None):
     """
     age = str(_weighted_random(ages))
 
-    if detail_level >= 2:
+    if classes:
         class_ = str(random.choice(classes))  # nosec
     else:
         class_ = None
@@ -207,7 +207,8 @@ def generate_npc(detail_level=2, ages=None, classes=None, races=None):
     )
 
 
-def generate_npcs(number=1, detail_level=2, filters=None):
+def generate_npcs(number=1, detail_level=2, filters=None,
+                  generate_adventurers=True):
     """Generate a number of NPCs.
 
     Detail level affects how much detailed the generated NPCs will be.
@@ -226,16 +227,19 @@ def generate_npcs(number=1, detail_level=2, filters=None):
     # filter the data
     if filters is None:
         filters = {}
+
     ages = _filter_structured_data(NPC_DATA['age'],
                                    filters.get('ages_yes'),
                                    filters.get('ages_no'))
-    # classes are not used for detail_level = 1
-    if detail_level >= 2:
+
+    # classes are only generated for adventurers
+    if generate_adventurers:
         classes = _filter_string_data(NPC_DATA['classes'],
                                       filters.get('classes_yes'),
                                       filters.get('classes_no'))
     else:
         classes = []
+
     races = _filter_structured_data(NPC_DATA['races'],
                                     filters.get('races_yes'),
                                     filters.get('races_no'))
