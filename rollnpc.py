@@ -34,8 +34,6 @@ def print_npc(npc):
               help='Allowed class(es).')
 @click.option('--class-disallowed', '-C', 'classes_no', multiple=True,
               help='Disallowed class(es).')
-@click.option('--detail-level', '-d', 'detail_level', default=2,
-              help='Amount of details generated (one or higher).')
 @click.option('--number', '-n', default=1,
               help='Number of NPCs to generate.')
 @click.option('--race-allowed', '-r', 'races_yes', multiple=True,
@@ -45,8 +43,10 @@ def print_npc(npc):
 @click.option('--seed', '-s', 'seed', default=None,
               help='Seed number used to generate NPCs. The same seed will '
                    'produce the same results.')
+@click.option('--traits', '-t', 'traits', type=click.IntRange(0, 9),
+              default=2, help='Number of traits generated.')
 def generate(adventurers=True, number=1, ages_yes=None, ages_no=None,
-             classes_yes=None, classes_no=None, detail_level=2,
+             classes_yes=None, classes_no=None, traits=2,
              races_yes=None, races_no=None, seed=None):
     """Generate 'number' of NPCs and print them."""
     filters = {
@@ -69,7 +69,7 @@ def generate(adventurers=True, number=1, ages_yes=None, ages_no=None,
 
     npcs = generate_npcs(
         number,
-        detail_level=detail_level,
+        traits=traits,
         filters=filters,
         generate_adventurers=adventurers
     )
