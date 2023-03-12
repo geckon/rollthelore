@@ -186,8 +186,8 @@ def test_generate_npcs():
     for npc in generate_npcs(npcs_count):
         _assert_npc_data_from_the_data_file(npc)
 
-    # Detail level 1
-    for npc in generate_npcs(npcs_count, traits=1):
+    # Civilians
+    for npc in generate_npcs(npcs_count, generate_adventurers=False):
         assert npc.class_ is None
         _assert_npc_data_from_the_data_file(npc)
 
