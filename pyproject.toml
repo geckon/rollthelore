@@ -11,7 +11,7 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.11"
 strictyaml = "^1.7.3"
 click = "^8.1.3"
 
